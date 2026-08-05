@@ -1,0 +1,7 @@
+pnpm exec commitlint --edit $1 --format ./commitlint-formatter.cjs || (
+  echo ""
+  echo "❌ Commit rejected"
+  echo "Use: type: description"
+  echo "Example: feat: add user authentication"
+  exit 1
+)
