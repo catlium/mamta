@@ -24,35 +24,53 @@ function Contact() {
             Get In Touch
           </h2>
 
-          <form className="space-y-5">
+          <form
+            action="https://formsubmit.co/your@email.com"
+            method="POST"
+            className="space-y-5"
+          >
+            {/* Hidden Fields */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value="New Contact Form Submission" />
 
             <input
               type="text"
+              name="name"
               placeholder="Full Name"
+              required
               className="w-full border border-gray-300 rounded-xl p-4 text-black placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
 
             <input
               type="email"
+              name="email"
               placeholder="Email Address"
+              required
               className="w-full border border-gray-300 rounded-xl p-4 text-black placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
 
             <input
               type="tel"
+              name="phone"
               placeholder="Phone Number"
+              required
               className="w-full border border-gray-300 rounded-xl p-4 text-black placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
 
             <input
               type="text"
+              name="subject"
               placeholder="Subject"
+              required
               className="w-full border border-gray-300 rounded-xl p-4 text-black placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
 
             <textarea
               rows={5}
+              name="message"
               placeholder="Your Message"
+              required
               className="w-full border border-gray-300 rounded-xl p-4 text-black placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
             ></textarea>
 
