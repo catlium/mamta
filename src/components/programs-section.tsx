@@ -60,7 +60,7 @@ function ProgramsSection() {
           delay: 3000,
         }),
       ]}
-      className="container mx-auto my-4"
+      className="w-full p-12 mx-auto"
     >
       <CarouselContent>
         {programs.map((program) => (
