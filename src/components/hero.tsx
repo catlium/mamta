@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-10"
+      className="max-w-7xl mx-auto px-6 py-16 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
     >
       {/* Left Side */}
       <div className="md:w-1/2">
@@ -13,7 +13,7 @@ function Hero() {
           Change the World Together
         </p>
 
-        <h1 className="text-5xl font-bold mt-6 leading-tight">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-6 leading-tight">
           Creating <span className="text-blue-600">Opportunities.</span>
           <br />
           Restoring <span className="text-blue-600">Dignity.</span>
