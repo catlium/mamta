@@ -6,38 +6,41 @@ import {
   Droplets,
   TriangleAlert,
   Heart,
-} from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
+} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 type CardProps = {
-  icon: React.ReactNode
-  title: string
-  description: string
-}
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+};
 
 function ImpactCard({ icon, title, description }: CardProps) {
   return (
-    <Card>
-      <CardHeader>
+    <Card className="py-2">
+      <CardHeader className="pb-2">
         <CardTitle className="flex items-center gap-2 text-orange-500">
           {icon} <span>{title}</span>
         </CardTitle>
       </CardHeader>
-      <CardContent>{description}</CardContent>
+
+      <CardContent className="pt-0">
+        {description}
+      </CardContent>
     </Card>
-  )
+  );
 }
 
 function Programs() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20">
+    <section className="mx-auto max-w-7xl px-6 py-10">
       {/* Heading */}
-      <h2 className="mb-14 text-center text-4xl font-bold text-orange-500">
+      <h2 className="mb-8 text-center text-4xl font-bold text-orange-500">
         Creating Measurable Change
       </h2>
 
       {/* Row 1 */}
-      <div className="mb-8 grid gap-8 md:grid-cols-2">
+      <div className="mb-5 grid gap-5 md:grid-cols-2">
         <ImpactCard
           icon={<Home size={28} />}
           title="Poor House"
@@ -59,7 +62,7 @@ function Programs() {
       </div>
 
       {/* Row 2 */}
-      <div className="mb-8 grid gap-8 md:grid-cols-3">
+      <div className="mb-5 grid gap-5 md:grid-cols-3">
         <ImpactCard
           icon={<HandCoins size={28} />}
           title="Sustainable Livelihood"
@@ -78,13 +81,13 @@ function Programs() {
           icon={<Heart size={28} />}
           title="Women's Sanitation"
           description="Lack of toilets and private sanitation facilities 
-          puts women and  girls at risk, affecting their health,
+          puts women and girls at risk, affecting their health,
           dignity, and safety every single day."
         />
       </div>
 
       {/* Row 3 */}
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-5 md:grid-cols-2">
         <ImpactCard
           icon={<Droplets size={28} />}
           title="Water Scarcity"
@@ -101,7 +104,7 @@ function Programs() {
         />
       </div>
     </section>
-  )
+  );
 }
 
-export default Programs
+export default Programs;
