@@ -5,7 +5,11 @@ function Hero() {
   return (
     <section
       id="home"
+<<<<<<< HEAD
       className="mx-auto flex max-w-7xl flex-col-reverse items-center justify-between gap-10 px-6 py-16 md:flex-row"
+=======
+      className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-10 px-6 py-16 md:flex-row"
+>>>>>>> feat/partners
     >
       {/* Left Side */}
       <div className="md:w-1/2">
@@ -13,7 +17,11 @@ function Hero() {
           Change the World Together
         </p>
 
+<<<<<<< HEAD
         <h1 className="mt-6 text-3xl leading-tight font-bold md:text-4xl lg:text-5xl">
+=======
+        <h1 className="mt-6 text-5xl leading-tight font-bold">
+>>>>>>> feat/partners
           Creating <span className="text-blue-600">Opportunities.</span>
           <br />
           Restoring <span className="text-blue-600">Dignity.</span>
@@ -56,17 +64,31 @@ function Hero() {
           <div className="absolute bottom-6 left-0 z-20 w-60 rounded-2xl bg-white p-5 shadow-xl">
             <div className="mb-3 flex items-center gap-3">
               <CheckCircle className="h-5 w-5 text-green-500" />
+<<<<<<< HEAD
               <span className="font-medium">CSR Registered</span>
+=======
+              <span className="font-medium text-gray-800">CSR Registered</span>
+>>>>>>> feat/partners
             </div>
 
             <div className="mb-3 flex items-center gap-3">
               <CheckCircle className="h-5 w-5 text-green-500" />
+<<<<<<< HEAD
               <span className="font-medium">12A Certified</span>
+=======
+              <span className="font-medium text-gray-800">12A Certified</span>
+>>>>>>> feat/partners
             </div>
 
             <div className="flex items-center gap-3">
               <CheckCircle className="h-5 w-5 text-green-500" />
+<<<<<<< HEAD
               <span className="font-medium">80G Tax Exemption</span>
+=======
+              <span className="font-medium text-gray-800">
+                80G Tax Exemption
+              </span>
+>>>>>>> feat/partners
             </div>
           </div>
         </div>

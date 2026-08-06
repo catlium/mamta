@@ -4,7 +4,11 @@ function About() {
   return (
     <section id="about" className="mx-auto max-w-7xl px-6 py-20">
       {/* Section Heading */}
+<<<<<<< HEAD
       <h2 className="mb-16 text-center text-5xl font-bold text-orange-500">
+=======
+      <h2 className="mb-10 text-center text-3xl font-bold text-orange-500">
+>>>>>>> feat/partners
         About Us
       </h2>
 
@@ -60,7 +64,7 @@ function About() {
                   />
                 </div>
 
-                <h3 className="text-xl font-bold group-hover:text-orange-500">
+                <h3 className="text-xl text-gray-800 font-bold group-hover:text-orange-500">
                   Mission
                 </h3>
               </div>
@@ -77,11 +81,11 @@ function About() {
                 <div className="rounded-full bg-blue-100 p-3 transition group-hover:bg-blue-500">
                   <Eye
                     size={22}
-                    className="text-blue-600 group-hover:text-white"
+                    className="text-blue-600  group-hover:text-white"
                   />
                 </div>
 
-                <h3 className="text-xl font-bold group-hover:text-blue-600">
+                <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-600">
                   Vision
                 </h3>
               </div>
