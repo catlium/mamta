@@ -6,14 +6,14 @@ import {
   Droplets,
   TriangleAlert,
   Heart,
-} from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+} from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 
 type CardProps = {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-};
+  icon: React.ReactNode
+  title: string
+  description: string
+}
 
 function ImpactCard({ icon, title, description }: CardProps) {
   return (
@@ -24,11 +24,9 @@ function ImpactCard({ icon, title, description }: CardProps) {
         </CardTitle>
       </CardHeader>
 
-      <CardContent className="pt-0">
-        {description}
-      </CardContent>
+      <CardContent className="pt-0">{description}</CardContent>
     </Card>
-  );
+  )
 }
 
 function Programs() {
@@ -104,7 +102,7 @@ function Programs() {
         />
       </div>
     </section>
-  );
+  )
 }
 
-export default Programs;
+export default Programs

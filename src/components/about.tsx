@@ -1,4 +1,4 @@
-import { Eye, Goal, ArrowRight } from "lucide-react";
+import { Eye, Goal, ArrowRight } from "lucide-react"
 
 function About() {
   return (
@@ -32,24 +32,20 @@ function About() {
 
         {/* Right Side */}
         <div>
-          {/* Who We Are */}
-          <h2 className="mb-6 text-5xl font-bold text-orange-500">
+          <p className="inline-block rounded-full bg-orange-100 px-4 py-2 font-medium text-orange-600">
             Who We Are
-          </h2>
+          </p>
 
-          <h3 className="text-4xl font-bold leading-tight">
+          <h2 className="mt-5 text-4xl leading-tight font-bold">
             Building Stronger Communities Through
-            <span className="text-blue-600">
-              {" "}
-              Compassion & Action
-            </span>
-          </h3>
+            <span className="text-blue-600"> Compassion & Action</span>
+          </h2>
 
           <p className="mt-6 leading-8 text-gray-600">
             Mamta Samajik Sanstha is committed to improving education,
             healthcare, women empowerment, sanitation and sustainable
-            livelihoods. Together with communities and volunteers, we
-            create long-term positive impact and meaningful change.
+            livelihoods. Together with communities and volunteers, we create
+            long-term positive impact and meaningful change.
           </p>
 
           {/* Mission & Vision */}
@@ -70,8 +66,8 @@ function About() {
               </div>
 
               <p className="mt-4 leading-7 text-gray-600">
-                Empower communities through education, healthcare,
-                livelihood opportunities and sustainable development.
+                Empower communities through education, healthcare, livelihood
+                opportunities and sustainable development.
               </p>
             </div>
 
@@ -105,7 +101,7 @@ function About() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default About;
+export default About
