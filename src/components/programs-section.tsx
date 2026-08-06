@@ -1,4 +1,4 @@
-import { Card, CardContent,  CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
-import { Button } from "./ui/button";
+import { Button } from "./ui/button"
 
 const programs = [
   {
@@ -46,34 +46,37 @@ const programs = [
     description:
       "Helping women become financially independent through skill development.",
   },
-];
+]
 
 function ProgramsSection() {
   return (
     <Carousel
       opts={{
         align: "start",
-        loop: true
+        loop: true,
       }}
       plugins={[
         Autoplay({
           delay: 3000,
         }),
       ]}
-      className="w-full p-12 mx-auto"
+      className="mx-auto w-full p-12"
     >
       <CarouselContent>
         {programs.map((program) => (
-          <CarouselItem key={program.title} className="basis-1/1 md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            key={program.title}
+            className="basis-1/1 md:basis-1/2 lg:basis-1/3"
+          >
             <div className="p-1">
               <Card>
                 <CardHeader>
                   <CardTitle>{program.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="flex flex-col gap-2 my-2 items-start">
+                <CardContent className="my-2 flex flex-col items-start gap-2">
                   <img src={program.image} alt={program.title}></img>
                   {program.description}
-                  <Button variant={'link'}>Learn More </Button>
+                  <Button variant={"link"}>Learn More </Button>
                 </CardContent>
               </Card>
             </div>
@@ -83,7 +86,7 @@ function ProgramsSection() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  );
+  )
 }
 
-export default ProgramsSection;
+export default ProgramsSection

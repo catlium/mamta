@@ -1,4 +1,3 @@
-
 import {
   Home,
   School,
@@ -7,39 +6,38 @@ import {
   Droplets,
   TriangleAlert,
   Heart,
-} from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+} from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 
 type CardProps = {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-};
+  icon: React.ReactNode
+  title: string
+  description: string
+}
 
-function ImpactCard({ icon, title, description , }: CardProps) {
+function ImpactCard({ icon, title, description }: CardProps) {
   return (
- <Card>
-  <CardHeader>
-    <CardTitle className="flex gap-2 items-center text-orange-500">{icon} <span>{title}</span></CardTitle>
-  </CardHeader>
-  <CardContent>
-    {description}
-  </CardContent>
- </Card>
-    
-  );
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2 text-orange-500">
+          {icon} <span>{title}</span>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>{description}</CardContent>
+    </Card>
+  )
 }
 
 function Programs() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-20">
+    <section className="mx-auto max-w-7xl px-6 py-20">
       {/* Heading */}
-      <h2 className="text-4xl font-bold text-center text-orange-500 mb-14">
+      <h2 className="mb-14 text-center text-4xl font-bold text-orange-500">
         Creating Measurable Change
       </h2>
 
       {/* Row 1 */}
-      <div className="grid md:grid-cols-2 gap-8 mb-8">
+      <div className="mb-8 grid gap-8 md:grid-cols-2">
         <ImpactCard
           icon={<Home size={28} />}
           title="Poor House"
@@ -61,7 +59,7 @@ function Programs() {
       </div>
 
       {/* Row 2 */}
-      <div className="grid md:grid-cols-3 gap-8 mb-8">
+      <div className="mb-8 grid gap-8 md:grid-cols-3">
         <ImpactCard
           icon={<HandCoins size={28} />}
           title="Sustainable Livelihood"
@@ -86,7 +84,7 @@ function Programs() {
       </div>
 
       {/* Row 3 */}
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid gap-8 md:grid-cols-2">
         <ImpactCard
           icon={<Droplets size={28} />}
           title="Water Scarcity"
@@ -103,7 +101,7 @@ function Programs() {
         />
       </div>
     </section>
-  );
+  )
 }
 
-export default Programs;
+export default Programs

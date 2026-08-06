@@ -1,7 +1,7 @@
-import ProgramsSection from "../components/programs-section";
+import ProgramsSection from "../components/programs-section"
 
 function ProgramsPage() {
-  return <ProgramsSection />;
+  return <ProgramsSection />
 }
 
-export default ProgramsPage;
+export default ProgramsPage
