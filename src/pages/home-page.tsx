@@ -1,4 +1,5 @@
 import Hero from "../components/hero";
+import Partners from "@/components/partners";
 import Impact from "../components/impact";
 import About from "../components/about";
 import ProgramsSection from "../components/programs-section";
@@ -8,6 +9,7 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <Partners/>
       <Impact />
       <About />
       <ProgramsSection />
