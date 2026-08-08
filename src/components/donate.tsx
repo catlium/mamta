@@ -172,7 +172,7 @@ function DonatePage() {
                   {isValidAmount ? `₹${selectedAmount}` : "₹0"}
                 </p>
               </div>
-              
+
               {/* QR Code */}
               {isValidAmount && (
                 <div className="flex flex-col items-center border-t pt-8">
