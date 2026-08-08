@@ -1,10 +1,10 @@
-import Autoplay from "embla-carousel-autoplay";
+import Autoplay from "embla-carousel-autoplay"
 
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@/components/ui/carousel";
+} from "@/components/ui/carousel"
 
 const partners = [
   {
@@ -31,7 +31,7 @@ const partners = [
     name: "HDFC Bank",
     logo: "/partners/hdfc.png",
   },
-];
+]
 
 function Partners() {
   return (
@@ -71,7 +71,7 @@ function Partners() {
         </Carousel>
       </div>
     </section>
-  );
+  )
 }
 
-export default Partners;
+export default Partners

@@ -7,8 +7,8 @@ function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white shadow-md">
+      {/* Logo */}
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img
             src="/logo.png"
@@ -63,9 +63,12 @@ function Navbar() {
         </ul>
 
         {/* Donate Button */}
-        <button className="hidden rounded-full bg-orange-500 px-6 py-3 text-white transition duration-300 hover:bg-orange-600 md:block">
+        <Link
+          to="/donate"
+          className="hidden rounded-full bg-orange-500 px-6 py-3 text-white transition duration-300 hover:bg-orange-600 md:block"
+        >
           Donate Us
-        </button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -118,9 +121,13 @@ function Navbar() {
             </li>
 
             <li>
-              <button className="w-full rounded-full bg-orange-500 py-3 text-white transition hover:bg-orange-600">
+              <Link
+                to="/donate"
+                onClick={() => setIsOpen(false)}
+                className="block w-full rounded-full bg-orange-500 py-3 text-center text-white transition hover:bg-orange-600"
+              >
                 Donate Us
-              </button>
+              </Link>
             </li>
           </ul>
         </div>

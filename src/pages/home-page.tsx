@@ -1,27 +1,21 @@
-<<<<<<< HEAD
 import Hero from "../components/hero"
+import Partners from "@/components/partners"
 import Impact from "../components/impact"
 import About from "../components/about"
 import ProgramsSection from "../components/programs-section"
 import Contact from "../components/contact"
-=======
-import Hero from "../components/hero";
-import Partners from "@/components/partners";
-import Impact from "../components/impact";
-import About from "../components/about";
-import ProgramsSection from "../components/programs-section";
-import Contact from "../components/contact";
->>>>>>> feat/partners
+import DonatePage from "@/components/donate"
 
 function HomePage() {
   return (
     <>
       <Hero />
-      <Partners/>
+      <Partners />
       <Impact />
       <About />
       <ProgramsSection />
       <Contact />
+      <DonatePage />
     </>
   )
 }

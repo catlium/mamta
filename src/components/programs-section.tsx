@@ -50,47 +50,7 @@ const programs = [
 
 function ProgramsSection() {
   return (
-<<<<<<< HEAD
-    <Carousel
-      opts={{
-        align: "start",
-        loop: true,
-      }}
-      plugins={[
-        Autoplay({
-          delay: 3000,
-        }),
-      ]}
-      className="mx-auto w-full p-12"
-    >
-      <CarouselContent>
-        {programs.map((program) => (
-          <CarouselItem
-            key={program.title}
-            className="basis-1/1 md:basis-1/2 lg:basis-1/3"
-          >
-            <div className="p-1">
-              <Card>
-                <CardHeader>
-                  <CardTitle>{program.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="my-2 flex flex-col items-start gap-2">
-                  <img src={program.image} alt={program.title}></img>
-                  {program.description}
-                  <Button variant={"link"}>Learn More </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-  )
-=======
     <section id="programs" className="container mx-auto my-10">
-
       {/* Section Heading */}
       <h2 className="mb-12 text-center text-3xl font-bold text-orange-500">
         Our Programs
@@ -99,7 +59,7 @@ function ProgramsSection() {
       <Carousel
         opts={{
           align: "start",
-          loop: true
+          loop: true,
         }}
         plugins={[
           Autoplay({
@@ -120,17 +80,12 @@ function ProgramsSection() {
                     <CardTitle>{program.title}</CardTitle>
                   </CardHeader>
 
-                  <CardContent className="flex flex-col gap-2 my-2 items-start">
-                    <img
-                      src={program.image}
-                      alt={program.title}
-                    />
+                  <CardContent className="my-2 flex flex-col items-start gap-2">
+                    <img src={program.image} alt={program.title} />
 
                     {program.description}
 
-                    <Button variant={"link"}>
-                      Learn More
-                    </Button>
+                    <Button variant={"link"}>Learn More</Button>
                   </CardContent>
                 </Card>
               </div>
@@ -141,10 +96,8 @@ function ProgramsSection() {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-
     </section>
-  );
->>>>>>> feat/partners
+  )
 }
 
 export default ProgramsSection
