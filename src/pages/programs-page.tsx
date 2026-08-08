@@ -2,41 +2,33 @@ import { Link } from "react-router"
 import { ArrowRight } from "lucide-react"
 import { programs } from "@/lib/contants/program-data"
 
-
 function ProgramsPage() {
   return (
     <main className="min-h-screen bg-gray-50">
-
       {/* Hero / Cover Section */}
       <section className="bg-blue-900 px-6 py-20 text-white">
         <div className="mx-auto max-w-7xl text-center">
-          <p className="font-semibold uppercase tracking-wide text-orange-400">
+          <p className="font-semibold tracking-wide text-orange-400 uppercase">
             What We Do
           </p>
 
-          <h1 className="mt-3 text-4xl font-bold md:text-5xl">
-            Our Programs
-          </h1>
+          <h1 className="mt-3 text-4xl font-bold md:text-5xl">Our Programs</h1>
 
           <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-blue-100">
-            We work alongside communities to create opportunities,
-            improve lives and build a better future through meaningful
-            field-based programs.
+            We work alongside communities to create opportunities, improve lives
+            and build a better future through meaningful field-based programs.
           </p>
         </div>
       </section>
 
       {/* Programs Section */}
       <section className="mx-auto max-w-7xl px-6 py-16">
-
         <div className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">
-            Our Work
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900">Our Work</h2>
 
           <p className="mt-2 max-w-2xl text-gray-600">
-            Explore our programs and learn how we are working with
-            communities across different areas.
+            Explore our programs and learn how we are working with communities
+            across different areas.
           </p>
         </div>
 
@@ -47,7 +39,6 @@ function ProgramsPage() {
               key={program.id}
               className="overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-
               {/* Cover Image */}
               <img
                 src={program.image}
@@ -57,8 +48,7 @@ function ProgramsPage() {
 
               {/* Content */}
               <div className="p-6">
-
-                <p className="text-sm font-semibold uppercase tracking-wide text-orange-500">
+                <p className="text-sm font-semibold tracking-wide text-orange-500 uppercase">
                   {program.category}
                 </p>
 
@@ -87,12 +77,10 @@ function ProgramsPage() {
                   Learn More
                   <ArrowRight size={18} />
                 </Link>
-
               </div>
             </div>
           ))}
         </div>
-
       </section>
     </main>
   )

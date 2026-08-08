@@ -42,9 +42,7 @@ export const router = createBrowserRouter([
         path: "donate",
         Component: DonatePage,
       },
-      {
-      
-      }
+      {},
     ],
   },
 ])

@@ -2,7 +2,6 @@ import { Link, useParams } from "react-router"
 import { ArrowLeft, MapPin, CheckCircle } from "lucide-react"
 import { programs } from "@/lib/contants/program-data"
 
-
 function SingleProgramPage() {
   const { id } = useParams()
 
@@ -35,10 +34,8 @@ function SingleProgramPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-
       {/* Cover Section */}
       <section className="relative">
-
         <img
           src={program.image}
           alt={program.title}
@@ -49,8 +46,7 @@ function SingleProgramPage() {
 
         <div className="absolute inset-0 flex items-center">
           <div className="mx-auto w-full max-w-7xl px-6 text-white">
-
-            <p className="font-semibold uppercase tracking-wide text-orange-400">
+            <p className="font-semibold tracking-wide text-orange-400 uppercase">
               {program.category}
             </p>
 
@@ -61,14 +57,12 @@ function SingleProgramPage() {
             <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-200">
               {program.description}
             </p>
-
           </div>
         </div>
       </section>
 
       {/* Main Content */}
       <section className="mx-auto max-w-7xl px-6 py-16">
-
         {/* Back Button */}
         <Link
           to="/programs"
@@ -79,10 +73,8 @@ function SingleProgramPage() {
         </Link>
 
         <div className="grid gap-12 lg:grid-cols-3">
-
           {/* Left Content */}
           <div className="lg:col-span-2">
-
             {/* About */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900">
@@ -102,15 +94,10 @@ function SingleProgramPage() {
 
               <div className="mt-6 space-y-4">
                 {program.objectives.map((objective) => (
-                  <div
-                    key={objective}
-                    className="flex items-start gap-3"
-                  >
+                  <div key={objective} className="flex items-start gap-3">
                     <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-orange-500" />
 
-                    <p className="text-gray-600">
-                      {objective}
-                    </p>
+                    <p className="text-gray-600">{objective}</p>
                   </div>
                 ))}
               </div>
@@ -128,9 +115,7 @@ function SingleProgramPage() {
                     key={activity}
                     className="rounded-xl bg-white p-5 shadow-sm"
                   >
-                    <p className="font-medium text-gray-800">
-                      {activity}
-                    </p>
+                    <p className="font-medium text-gray-800">{activity}</p>
                   </div>
                 ))}
               </div>
@@ -143,41 +128,29 @@ function SingleProgramPage() {
               </h2>
 
               <div className="mt-6 rounded-2xl bg-white p-6 shadow-sm">
-
                 <ul className="space-y-4">
                   {program.requirements.map((requirement) => (
-                    <li
-                      key={requirement}
-                      className="flex items-center gap-3"
-                    >
+                    <li key={requirement} className="flex items-center gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500" />
 
-                      <span className="text-gray-700">
-                        {requirement}
-                      </span>
+                      <span className="text-gray-700">{requirement}</span>
                     </li>
                   ))}
                 </ul>
-
               </div>
             </section>
-
           </div>
 
           {/* Right Sidebar */}
           <aside>
-
             <div className="sticky top-24 rounded-2xl bg-white p-6 shadow-md">
-
               <h3 className="text-2xl font-bold text-gray-900">
                 Program Information
               </h3>
 
               {/* Category */}
               <div className="mt-6 border-b pb-4">
-                <p className="text-sm text-gray-500">
-                  Category
-                </p>
+                <p className="text-sm text-gray-500">Category</p>
 
                 <p className="mt-1 font-semibold text-gray-800">
                   {program.category}
@@ -186,9 +159,7 @@ function SingleProgramPage() {
 
               {/* Location */}
               <div className="border-b py-4">
-                <p className="text-sm text-gray-500">
-                  Location
-                </p>
+                <p className="text-sm text-gray-500">Location</p>
 
                 <div className="mt-1 flex items-center gap-2">
                   <MapPin className="h-4 w-4 text-orange-500" />
@@ -201,13 +172,11 @@ function SingleProgramPage() {
 
               {/* Volunteer */}
               <div className="pt-5">
-                <h4 className="font-semibold text-gray-900">
-                  Want to help?
-                </h4>
+                <h4 className="font-semibold text-gray-900">Want to help?</h4>
 
                 <p className="mt-2 text-sm leading-6 text-gray-600">
-                  You can support this program by volunteering,
-                  donating or helping us reach more communities.
+                  You can support this program by volunteering, donating or
+                  helping us reach more communities.
                 </p>
 
                 <Link
@@ -217,13 +186,9 @@ function SingleProgramPage() {
                   Get Involved
                 </Link>
               </div>
-
             </div>
-
           </aside>
-
         </div>
-
       </section>
     </main>
   )

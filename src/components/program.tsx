@@ -51,10 +51,9 @@ function ProgramsPage() {
   return (
     <section className="min-h-screen bg-gray-50 px-6 py-16">
       <div className="mx-auto max-w-7xl">
-
         {/* Heading */}
         <div className="mb-14 text-center">
-          <p className="font-semibold uppercase tracking-wide text-orange-500">
+          <p className="font-semibold tracking-wide text-orange-500 uppercase">
             What We Do
           </p>
 
@@ -63,8 +62,8 @@ function ProgramsPage() {
           </h1>
 
           <p className="mx-auto mt-4 max-w-2xl leading-7 text-gray-600">
-            We work with communities to create opportunities, improve
-            quality of life, and build a stronger and more sustainable future.
+            We work with communities to create opportunities, improve quality of
+            life, and build a stronger and more sustainable future.
           </p>
         </div>
 
@@ -100,16 +99,13 @@ function ProgramsPage() {
 
         {/* Bottom Section */}
         <div className="mt-16 rounded-3xl bg-blue-900 px-6 py-10 text-center text-white md:px-12">
-          <h2 className="text-3xl font-bold">
-            Together, We Can Create Change
-          </h2>
+          <h2 className="text-3xl font-bold">Together, We Can Create Change</h2>
 
           <p className="mx-auto mt-4 max-w-2xl leading-7 text-blue-100">
-            Every program is designed to work alongside communities,
-            understand their needs, and create meaningful long-term impact.
+            Every program is designed to work alongside communities, understand
+            their needs, and create meaningful long-term impact.
           </p>
         </div>
-
       </div>
     </section>
   )

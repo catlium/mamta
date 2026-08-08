@@ -10,7 +10,7 @@ export type Program = {
   requirements: string[]
 }
 
-export const programs:Program[] = [
+export const programs: Program[] = [
   {
     id: "education-support",
     image: "https://picsum.photos/400/300",
@@ -79,11 +79,7 @@ export const programs:Program[] = [
       "Awareness programs",
       "Community interaction",
     ],
-    requirements: [
-      "Skill trainers",
-      "Volunteers",
-      "Training materials",
-    ],
+    requirements: ["Skill trainers", "Volunteers", "Training materials"],
   },
 
   {
@@ -104,11 +100,7 @@ export const programs:Program[] = [
       "Livelihood awareness programs",
       "Community field work",
     ],
-    requirements: [
-      "Volunteers",
-      "Skill trainers",
-      "Training materials",
-    ],
+    requirements: ["Volunteers", "Skill trainers", "Training materials"],
   },
 
   {
@@ -154,10 +146,6 @@ export const programs:Program[] = [
       "Community field visits",
       "Emergency support activities",
     ],
-    requirements: [
-      "Volunteers",
-      "Relief materials",
-      "Essential supplies",
-    ],
+    requirements: ["Volunteers", "Relief materials", "Essential supplies"],
   },
-];
+]
