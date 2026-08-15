@@ -1,103 +1,127 @@
-import { Eye, Goal, ArrowRight } from "lucide-react"
+import { ArrowRight, Eye, Goal } from "lucide-react"
+import { Button } from "./ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
+import { Link } from "react-router"
 
 function About() {
   return (
-    <section id="about" className="mx-auto max-w-7xl px-6 py-20">
+    <section id="about" className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
       {/* Section Heading */}
-      <h2 className="mb-10 text-center text-3xl font-bold text-orange-500">
-        About Us
-      </h2>
+      <div className="mx-auto mb-14 max-w-3xl text-center">
+        <p className="mb-3 text-sm font-medium tracking-widest text-primary uppercase">
+          About Us
+        </p>
 
-      <div className="grid items-center gap-16 lg:grid-cols-2">
-        {/* Left Side */}
+        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          Working Alongside Communities{" "}
+          <span className="text-primary">Since 2010.</span>
+        </h2>
+
+        <p className="mt-5 text-lg leading-8 text-muted-foreground">
+          Building opportunities, strengthening communities, and working towards
+          a society where every person can live with dignity and equal
+          opportunity.
+        </p>
+      </div>
+
+      <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+        {/* Images */}
         <div className="grid grid-cols-2 gap-4">
-          <img
-            src="https://via.placeholder.com/300x420"
-            alt="About 1"
-            className="h-[420px] w-full rounded-3xl object-cover"
-          />
+          {/* Large image */}
+          <div className="overflow-hidden rounded-2xl border bg-muted">
+            <div className="aspect-3/4 w-full bg-muted" />
+          </div>
 
-          <img
-            src="https://via.placeholder.com/300x420"
-            alt="About 2"
-            className="mt-10 h-[420px] w-full rounded-3xl object-cover"
-          />
+          {/* Second image */}
+          <div className="mt-10 overflow-hidden rounded-2xl border bg-muted">
+            <div className="aspect-3/4 w-full bg-muted" />
+          </div>
 
-          <img
-            src="https://via.placeholder.com/620x220"
-            alt="About 3"
-            className="col-span-2 h-56 w-full rounded-3xl object-cover"
-          />
+          {/* Wide image */}
+          <div className="col-span-2 overflow-hidden rounded-2xl border bg-muted">
+            <div className="aspect-3/1 w-full bg-muted" />
+          </div>
         </div>
 
-        {/* Right Side */}
+        {/* Content */}
         <div>
-          <p className="inline-block rounded-full bg-orange-100 px-4 py-2 font-medium text-orange-600">
+          <p className="text-sm font-semibold tracking-widest text-primary uppercase">
             Who We Are
           </p>
 
-          <h2 className="mt-5 text-4xl leading-tight font-bold">
-            Building Stronger Communities Through
-            <span className="text-blue-600"> Compassion & Action</span>
-          </h2>
+          <h3 className="mt-4 text-3xl leading-tight font-bold tracking-tight sm:text-4xl">
+            Creating opportunities for people to build a{" "}
+            <span className="text-primary">better future.</span>
+          </h3>
 
-          <p className="mt-6 leading-8 text-gray-600">
-            Mamta Samajik Sanstha is committed to improving education,
-            healthcare, women empowerment, sanitation and sustainable
-            livelihoods. Together with communities and volunteers, we create
-            long-term positive impact and meaningful change.
-          </p>
+          <div className="mt-6 space-y-4 text-muted-foreground">
+            <p className="leading-7">
+              Mamta Samajik Sanstha is a community-focused organization working
+              to improve the lives of people through education, healthcare,
+              women's empowerment, livelihood development, social justice, and
+              humanitarian support.
+            </p>
 
-          {/* Mission & Vision */}
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {/* Mission */}
-            <div className="group cursor-pointer rounded-2xl bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border hover:border-orange-500 hover:shadow-2xl">
-              <div className="flex items-center gap-3">
-                <div className="rounded-full bg-orange-100 p-3 transition group-hover:bg-orange-500">
-                  <Goal
-                    size={22}
-                    className="text-orange-500 group-hover:text-white"
-                  />
-                </div>
+            <p className="leading-7">
+              Since 2010, we have worked alongside communities across
+              Maharashtra, responding to local needs and creating opportunities
+              for people to become more self-reliant and secure.
+            </p>
 
-                <h3 className="text-xl font-bold text-gray-800 group-hover:text-orange-500">
-                  Mission
-                </h3>
-              </div>
-
-              <p className="mt-4 leading-7 text-gray-600">
-                Empower communities through education, healthcare, livelihood
-                opportunities and sustainable development.
-              </p>
-            </div>
-
-            {/* Vision */}
-            <div className="group cursor-pointer rounded-2xl bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border hover:border-blue-500 hover:shadow-2xl">
-              <div className="flex items-center gap-3">
-                <div className="rounded-full bg-blue-100 p-3 transition group-hover:bg-blue-500">
-                  <Eye
-                    size={22}
-                    className="text-blue-600 group-hover:text-white"
-                  />
-                </div>
-
-                <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-600">
-                  Vision
-                </h3>
-              </div>
-
-              <p className="mt-4 leading-7 text-gray-600">
-                Build an inclusive society where everyone has equal
-                opportunities, dignity and a better future.
-              </p>
-            </div>
+            <p className="leading-7">
+              Our approach is rooted in participation, dignity, and
+              sustainability. We believe lasting change happens when communities
+              are empowered to become active participants in their own
+              development.
+            </p>
           </div>
 
-          {/* Button */}
-          <button className="mt-10 flex items-center gap-2 rounded-full bg-orange-500 px-7 py-3 text-white transition hover:bg-orange-600">
-            Learn More
-            <ArrowRight size={18} />
-          </button>
+          {/* Mission & Vision */}
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            <Card>
+              <CardHeader>
+                <div className="mb-2 flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <Goal className="h-5 w-5" />
+                </div>
+
+                <CardTitle>Our Mission</CardTitle>
+              </CardHeader>
+
+              <CardContent>
+                <p className="text-sm leading-6 text-muted-foreground">
+                  To empower communities through education, healthcare,
+                  livelihood opportunities, social awareness, and sustainable
+                  development.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <div className="mb-2 flex h-11 w-11 items-center justify-center rounded-lg bg-secondary/20 text-secondary-foreground">
+                  <Eye className="h-5 w-5" />
+                </div>
+
+                <CardTitle>Our Vision</CardTitle>
+              </CardHeader>
+
+              <CardContent>
+                <p className="text-sm leading-6 text-muted-foreground">
+                  A society where communities have equal and just opportunities,
+                  self-reliance, dignity, and the ability to build a better
+                  future.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* CTA */}
+          <Button variant="link" className="mt-8 rounded-full p-4">
+            <Link to="/about" className="flex items-center gap-2">
+              Learn More About Our Work
+              <ArrowRight />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
