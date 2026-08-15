@@ -1,76 +1,166 @@
-import { CheckCircle } from "lucide-react"
-import heroImage from "../assets/hero.png"
+import { ArrowRight, CheckCircle } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+import womenImage from "../assets/hero/women.jpg"
+import educationImage from "../assets/hero/education.jpg"
+import healthImage from "../assets/hero/health.jpg"
+import youthImage from "../assets/hero/youth.jpg"
+import { useEffect, useState } from "react"
+
+type HeroImage = {
+  src: string
+  alt: string
+}
+
+const heroImages: HeroImage[] = [
+  {
+    src: womenImage,
+    alt: "Women empowerment initiative",
+  },
+  {
+    src: educationImage,
+    alt: "Education initiative",
+  },
+  {
+    src: healthImage,
+    alt: "Community health initiative",
+  },
+  {
+    src: youthImage,
+    alt: "Youth development initiative",
+  },
+]
 
 function Hero() {
+  const [images, setImages] = useState(heroImages)
+  const [isAnimating, setIsAnimating] = useState(false)
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setIsAnimating(true)
+
+      window.setTimeout(() => {
+        setImages((current) => {
+          const [first, ...rest] = current
+
+          return [...rest, first]
+        })
+
+        setIsAnimating(false)
+      }, 650)
+    }, 4000)
+
+    return () => window.clearInterval(interval)
+  }, [])
   return (
-    <section className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-6 py-16 md:flex-row md:py-20">
-      {/* Left Side */}
-      <div className="md:w-1/2">
-        <p className="inline-block rounded-full bg-orange-100 px-4 py-2 font-medium text-orange-600">
-          Change the World Together
-        </p>
+    <section className="relative overflow-hidden">
+      {/* Background */}
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_85%_20%,hsl(var(--primary)/0.10),transparent_30%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_10%_90%,hsl(var(--secondary)/0.35),transparent_30%)]" />
 
-        <h1 className="mt-6 text-3xl leading-tight font-bold md:text-4xl lg:text-5xl">
-          Creating <span className="text-blue-600">Opportunities.</span>
-          <br />
-          Restoring <span className="text-blue-600">Dignity.</span>
-          <br />
-          Transforming <span className="text-blue-600">Communities.</span>
-        </h1>
+      <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 py-16 sm:py-20 lg:grid-cols-2 lg:gap-20 lg:py-24">
+        {/* Left */}
+        <div className="max-w-2xl">
+          {/* Eyebrow */}
+          <div className="inline-flex items-center gap-2 rounded-full border bg-muted/50 px-4 py-2 text-sm font-medium text-muted-foreground backdrop-blur">
+            <span className="h-2 w-2 rounded-full bg-primary" />
+            Serving communities since 2010
+          </div>
 
-        <p className="mt-6 leading-8 text-gray-600">
-          Since 2010, Mamta Samajeek Sansta has worked alongside communities
-          across Maharashtra to improve lives through education, healthcare,
-          women's empowerment, livelihood development, disaster relief and
-          social justice.
-        </p>
+          {/* Heading */}
+          <h1 className="mt-7 text-4xl leading-[1.08] font-black tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+            Creating <span className="text-primary">Opportunities.</span>
+            <br />
+            Restoring <span className="text-primary">Dignity.</span>
+            <br />
+            Transforming <span className="text-primary">Communities.</span>
+          </h1>
 
-        <div className="mt-8 flex gap-4">
-          <button className="rounded-full bg-orange-500 px-6 py-3 text-white transition hover:bg-orange-600">
-            Contact Us
-          </button>
+          {/* Description */}
+          <p className="mt-7 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+            Mamta Samajeek Sansta works alongside communities across Maharashtra
+            to create meaningful change through education, healthcare,
+            women&apos;s empowerment, livelihood development, disaster relief,
+            and social justice.
+          </p>
 
-          <button className="rounded-full border border-orange-500 px-6 py-3 text-orange-500 transition hover:bg-orange-50">
-            Explore Programs
-          </button>
+          {/* CTA */}
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <Button size="lg" className="group rounded-full px-7">
+              Support Our Mission
+              <ArrowRight className="transition-transform group-hover:translate-x-1" />
+            </Button>
+
+            <Button size="lg" variant="outline" className="rounded-full px-7">
+              Explore Our Work
+            </Button>
+          </div>
+
+          {/* Trust statement */}
+          <p className="mt-8 text-sm text-muted-foreground">
+            Working with communities to create opportunities, dignity, and
+            lasting change.
+          </p>
         </div>
-      </div>
 
-      {/* Right Side */}
-      <div className="flex justify-center md:w-1/2">
-        <div className="relative">
-          {/* Orange Background */}
-          <div className="absolute top-0 right-0 h-[460px] w-[380px] rounded-3xl bg-orange-400"></div>
+        {/* Right */}
+        <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
+          {/* Decorative shape */}
+          <div className="absolute -top-3 -right-3 h-full w-full rounded-[2rem] bg-primary/15 sm:-top-5 sm:-right-5" />
 
-          {/* Hero Image */}
-          <img
-            src={heroImage}
-            alt="Hero"
-            className="relative z-10 mt-5 mr-5 h-[470px] w-[380px] rounded-3xl object-cover shadow-xl"
-          />
+          {/* Image Stack */}
+          <div className="relative aspect-[4/5] w-full">
+            {images.map((image, index) => {
+              const isTop = index === 0
 
-          {/* White Certification Card */}
-          <div className="absolute bottom-6 left-0 z-20 w-60 rounded-2xl bg-white p-5 shadow-xl">
-            <div className="mb-3 flex items-center gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="font-medium text-gray-800">CSR Registered</span>
-            </div>
+              return (
+                <img
+                  key={image.src}
+                  src={image.src}
+                  alt={image.alt}
+                  className={`absolute inset-0 h-full w-full rounded-[2rem] border bg-muted object-cover shadow-xl transition-all duration-700 ease-in-out ${
+                    isTop && isAnimating
+                      ? "-translate-x-16 -translate-y-6 rotate-6 opacity-0"
+                      : ""
+                  } `}
+                  style={{
+                    zIndex: images.length - index,
+                    transform:
+                      isTop && isAnimating
+                        ? undefined
+                        : `translate(${index * 10}px, ${
+                            index * 10
+                          }px) scale(${1 - index * 0.035})`,
+                  }}
+                />
+              )
+            })}
+          </div>
 
-            <div className="mb-3 flex items-center gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="font-medium text-gray-800">12A Certified</span>
-            </div>
+          {/* Credentials */}
+          <div className="absolute -bottom-7 -left-4 z-30 w-[calc(100%-2rem)] max-w-xs rounded-2xl border bg-background/95 p-5 shadow-xl backdrop-blur sm:-left-8">
+            <p className="mb-4 text-xs font-bold tracking-wider text-muted-foreground uppercase">
+              Our Credentials
+            </p>
 
-            <div className="flex items-center gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="font-medium text-gray-800">
-                80G Tax Exemption
-              </span>
+            <div className="space-y-3">
+              <Credential text="CSR Registered" />
+              <Credential text="12A Certified" />
+              <Credential text="80G Tax Exemption" />
             </div>
           </div>
         </div>
       </div>
     </section>
+  )
+}
+
+function Credential({ text }: { text: string }) {
+  return (
+    <div className="flex items-center gap-3">
+      <CheckCircle className="h-5 w-5 shrink-0 text-primary" />
+      <span className="text-sm font-medium">{text}</span>
+    </div>
   )
 }
 
