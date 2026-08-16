@@ -9,31 +9,29 @@ import { Link } from "react-router";
 
 function Footer() {
   return (
-    <footer className="border-t bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-8">
+    <footer className="border-t bg-muted">
+      <div className="mx-auto max-w-7xl px-6 py-10">
 
         {/* Top */}
-        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
 
           {/* Logo */}
-          <Link to="/">
-            <div>
-              <h1 className="text-2xl font-bold text-primary">
-                MAMTA
-              </h1>
+          <Link to="/" className="text-center md:text-left">
+            <h1 className="text-2xl font-bold text-primary">
+              MAMTA
+            </h1>
 
-              <p className="text-xs text-secondary">
-                Samajik Sanstha
-              </p>
-            </div>
+            <p className="text-xs text-secondary">
+              Samajik Sanstha
+            </p>
           </Link>
 
           {/* Navigation */}
-          <ul className="flex flex-wrap justify-center gap-6 font-medium md:gap-10">
+          <ul className="flex flex-wrap justify-center gap-6 font-medium text-foreground">
             <li>
               <Link
                 to="/"
-                className="text-foreground transition hover:text-secondary"
+                className="transition-colors hover:text-secondary"
               >
                 Home
               </Link>
@@ -42,7 +40,7 @@ function Footer() {
             <li>
               <Link
                 to="/about"
-                className="text-foreground transition hover:text-secondary"
+                className="transition-colors hover:text-secondary"
               >
                 About
               </Link>
@@ -51,7 +49,7 @@ function Footer() {
             <li>
               <Link
                 to="/programs"
-                className="text-foreground transition hover:text-secondary"
+                className="transition-colors hover:text-secondary"
               >
                 Programs
               </Link>
@@ -60,7 +58,7 @@ function Footer() {
             <li>
               <Link
                 to="/contact"
-                className="text-foreground transition hover:text-secondary"
+                className="transition-colors hover:text-secondary"
               >
                 Contact
               </Link>
@@ -69,7 +67,7 @@ function Footer() {
             <li>
               <Link
                 to="/donate"
-                className="text-foreground transition hover:text-secondary"
+                className="transition-colors hover:text-secondary"
               >
                 Donate
               </Link>
@@ -77,65 +75,61 @@ function Footer() {
           </ul>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-4 text-2xl">
-
+          <div className="flex items-center gap-4 text-xl">
             <a
-              href="mailto:info@mamtango.org"
-              className="text-foreground transition duration-300 hover:text-secondary"
+              href="mailto:"
               aria-label="Email"
+              className="text-foreground transition-colors hover:text-secondary"
             >
               <Mail />
             </a>
 
             <a
               href="#"
-              className="text-primary transition duration-300 hover:scale-110"
               aria-label="Facebook"
+              className="text-foreground transition-colors hover:text-secondary"
             >
               <FaFacebook />
             </a>
 
             <a
               href="#"
-              className="text-secondary transition duration-300 hover:scale-110"
               aria-label="Instagram"
+              className="text-foreground transition-colors hover:text-secondary"
             >
               <FaInstagram />
             </a>
 
             <a
               href="#"
-              className="text-primary transition duration-300 hover:scale-110"
               aria-label="LinkedIn"
+              className="text-foreground transition-colors hover:text-secondary"
             >
               <FaLinkedin />
             </a>
 
             <a
               href="#"
-              className="text-foreground transition duration-300 hover:scale-110"
               aria-label="X"
+              className="text-foreground transition-colors hover:text-secondary"
             >
               <FaXTwitter />
             </a>
-
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-border pt-4 text-sm md:flex-row">
-
-          <p className="text-muted-foreground">
+        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-border pt-5 text-sm text-muted-foreground md:flex-row">
+          <p>
             © 2026 Mamta Samajik Sanstha. All Rights Reserved.
           </p>
 
-          <p className="text-muted-foreground">
+          <p>
             Design & Developed By{" "}
             <span className="font-semibold text-secondary">
               CatLium
             </span>
           </p>
-
         </div>
 
       </div>
