@@ -29,9 +29,7 @@ function AboutPage() {
 
               <h1 className="mt-3 text-4xl leading-tight font-bold md:text-5xl">
                 Working With Communities{" "}
-                <span className="text-primary">
-                  For A Better Tomorrow
-                </span>
+                <span className="text-primary">For A Better Tomorrow</span>
               </h1>
 
               <p className="mt-6 leading-8 text-muted-foreground">
@@ -60,9 +58,7 @@ function AboutPage() {
               <div className="relative rounded-3xl bg-primary p-8 text-primary-foreground shadow-xl md:p-10">
                 <Heart className="h-10 w-10 text-secondary" />
 
-                <h2 className="mt-6 text-3xl font-bold">
-                  People First
-                </h2>
+                <h2 className="mt-6 text-3xl font-bold">People First</h2>
 
                 <p className="mt-4 leading-7 text-primary-foreground/90">
                   Our approach begins with people. We listen to communities,
@@ -72,9 +68,7 @@ function AboutPage() {
 
                 <div className="mt-8 grid grid-cols-2 gap-4">
                   <div className="rounded-2xl bg-primary-foreground/10 p-5">
-                    <p className="text-3xl font-bold text-secondary">
-                      2010
-                    </p>
+                    <p className="text-3xl font-bold text-secondary">2010</p>
 
                     <p className="mt-1 text-sm text-primary-foreground/90">
                       Journey Began
@@ -128,13 +122,9 @@ function AboutPage() {
 
                 <Card className="mt-4 border-border bg-card shadow-sm md:mt-0">
                   <CardContent className="p-6">
-                    <p className="font-bold text-secondary">
-                      2010
-                    </p>
+                    <p className="font-bold text-secondary">2010</p>
 
-                    <h3 className="mt-1 text-xl font-bold">
-                      The Beginning
-                    </h3>
+                    <h3 className="mt-1 text-xl font-bold">The Beginning</h3>
 
                     <p className="mt-3 leading-7 text-muted-foreground">
                       Mamta began its journey with a commitment to work
@@ -153,9 +143,7 @@ function AboutPage() {
 
                 <Card className="mt-4 border-border bg-card shadow-sm md:mt-0">
                   <CardContent className="p-6">
-                    <p className="font-bold text-primary">
-                      Growth
-                    </p>
+                    <p className="font-bold text-primary">Growth</p>
 
                     <h3 className="mt-1 text-xl font-bold">
                       Expanding Our Work
@@ -178,9 +166,7 @@ function AboutPage() {
 
                 <Card className="mt-4 border-border bg-card shadow-sm md:mt-0">
                   <CardContent className="p-6">
-                    <p className="font-bold text-secondary">
-                      Today
-                    </p>
+                    <p className="font-bold text-secondary">Today</p>
 
                     <h3 className="mt-1 text-xl font-bold">
                       Building Sustainable Change
@@ -213,9 +199,7 @@ function AboutPage() {
 
               <h2 className="mt-3 text-3xl leading-tight font-bold md:text-4xl">
                 Change Begins When{" "}
-                <span className="text-primary">
-                  People Get An Opportunity
-                </span>
+                <span className="text-primary">People Get An Opportunity</span>
               </h2>
 
               <p className="mt-6 leading-8 text-muted-foreground">
@@ -225,10 +209,10 @@ function AboutPage() {
               </p>
 
               <p className="mt-4 leading-8 text-muted-foreground">
-                We exist because these challenges should not determine
-                someone's future. We believe people deserve the opportunity to
-                live with dignity, make informed choices and build a better
-                future for themselves and their families.
+                We exist because these challenges should not determine someone's
+                future. We believe people deserve the opportunity to live with
+                dignity, make informed choices and build a better future for
+                themselves and their families.
               </p>
 
               <p className="mt-4 leading-8 text-muted-foreground">
@@ -244,9 +228,7 @@ function AboutPage() {
                 <CardContent className="p-6">
                   <Target className="h-9 w-9 text-secondary" />
 
-                  <h3 className="mt-5 text-xl font-bold">
-                    Opportunity
-                  </h3>
+                  <h3 className="mt-5 text-xl font-bold">Opportunity</h3>
 
                   <p className="mt-3 leading-7 text-muted-foreground">
                     Creating access to opportunities that can improve people's
@@ -259,9 +241,7 @@ function AboutPage() {
                 <CardContent className="p-6">
                   <HandHeart className="h-9 w-9 text-primary" />
 
-                  <h3 className="mt-5 text-xl font-bold">
-                    Dignity
-                  </h3>
+                  <h3 className="mt-5 text-xl font-bold">Dignity</h3>
 
                   <p className="mt-3 leading-7 text-muted-foreground">
                     Ensuring people are treated with respect, equality and
@@ -274,13 +254,10 @@ function AboutPage() {
                 <CardContent className="p-6">
                   <Users className="h-9 w-9 text-primary" />
 
-                  <h3 className="mt-5 text-xl font-bold">
-                    Participation
-                  </h3>
+                  <h3 className="mt-5 text-xl font-bold">Participation</h3>
 
                   <p className="mt-3 leading-7 text-muted-foreground">
-                    Involving communities in decisions that affect their
-                    future.
+                    Involving communities in decisions that affect their future.
                   </p>
                 </CardContent>
               </Card>
@@ -289,9 +266,7 @@ function AboutPage() {
                 <CardContent className="p-6">
                   <Leaf className="h-9 w-9 text-secondary" />
 
-                  <h3 className="mt-5 text-xl font-bold">
-                    Sustainability
-                  </h3>
+                  <h3 className="mt-5 text-xl font-bold">Sustainability</h3>
 
                   <p className="mt-3 leading-7 text-muted-foreground">
                     Building solutions that can continue creating impact over
@@ -329,9 +304,7 @@ function AboutPage() {
               <CardContent className="p-6">
                 <Heart className="h-8 w-8 text-secondary" />
 
-                <h3 className="mt-5 font-bold">
-                  Compassion
-                </h3>
+                <h3 className="mt-5 font-bold">Compassion</h3>
 
                 <p className="mt-3 text-sm leading-6 text-primary-foreground/80">
                   We listen, understand and respond with empathy.
@@ -343,9 +316,7 @@ function AboutPage() {
               <CardContent className="p-6">
                 <Scale className="h-8 w-8 text-secondary" />
 
-                <h3 className="mt-5 font-bold">
-                  Equality
-                </h3>
+                <h3 className="mt-5 font-bold">Equality</h3>
 
                 <p className="mt-3 text-sm leading-6 text-primary-foreground/80">
                   We believe everyone deserves equal opportunity.
@@ -357,9 +328,7 @@ function AboutPage() {
               <CardContent className="p-6">
                 <ShieldCheck className="h-8 w-8 text-secondary" />
 
-                <h3 className="mt-5 font-bold">
-                  Integrity
-                </h3>
+                <h3 className="mt-5 font-bold">Integrity</h3>
 
                 <p className="mt-3 text-sm leading-6 text-primary-foreground/80">
                   We value honesty, responsibility and transparency.
@@ -371,9 +340,7 @@ function AboutPage() {
               <CardContent className="p-6">
                 <Leaf className="h-8 w-8 text-secondary" />
 
-                <h3 className="mt-5 font-bold">
-                  Sustainability
-                </h3>
+                <h3 className="mt-5 font-bold">Sustainability</h3>
 
                 <p className="mt-3 text-sm leading-6 text-primary-foreground/80">
                   We focus on solutions that create lasting change.
@@ -385,9 +352,7 @@ function AboutPage() {
               <CardContent className="p-6">
                 <Users className="h-8 w-8 text-secondary" />
 
-                <h3 className="mt-5 font-bold">
-                  Community
-                </h3>
+                <h3 className="mt-5 font-bold">Community</h3>
 
                 <p className="mt-3 text-sm leading-6 text-primary-foreground/80">
                   We believe communities are partners in development.
@@ -425,9 +390,7 @@ function AboutPage() {
                   <Users className="h-8 w-8 text-secondary" />
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold">
-                  Leadership
-                </h3>
+                <h3 className="mt-6 text-xl font-bold">Leadership</h3>
 
                 <p className="mt-3 leading-7 text-muted-foreground">
                   Our leadership team provides direction, accountability and a
@@ -442,9 +405,7 @@ function AboutPage() {
                   <HandHeart className="h-8 w-8 text-primary" />
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold">
-                  Field Team
-                </h3>
+                <h3 className="mt-6 text-xl font-bold">Field Team</h3>
 
                 <p className="mt-3 leading-7 text-muted-foreground">
                   Our field teams work directly with communities, understand
@@ -459,9 +420,7 @@ function AboutPage() {
                   <Heart className="h-8 w-8 text-secondary" />
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold">
-                  Volunteers
-                </h3>
+                <h3 className="mt-6 text-xl font-bold">Volunteers</h3>
 
                 <p className="mt-3 leading-7 text-muted-foreground">
                   Volunteers contribute their time, skills and compassion to
@@ -483,21 +442,15 @@ function AboutPage() {
               Our Approach
             </p>
 
-            <h2 className="mt-2 text-3xl font-bold md:text-4xl">
-              How We Work
-            </h2>
+            <h2 className="mt-2 text-3xl font-bold md:text-4xl">How We Work</h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-4">
             <Card className="border-border bg-card shadow-sm">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-secondary/40">
-                  01
-                </span>
+                <span className="text-4xl font-bold text-secondary/40">01</span>
 
-                <h3 className="mt-4 text-xl font-bold">
-                  Listen
-                </h3>
+                <h3 className="mt-4 text-xl font-bold">Listen</h3>
 
                 <p className="mt-3 leading-7 text-muted-foreground">
                   We begin by listening to communities and understanding their
@@ -508,13 +461,9 @@ function AboutPage() {
 
             <Card className="border-border bg-card shadow-sm">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-primary/40">
-                  02
-                </span>
+                <span className="text-4xl font-bold text-primary/40">02</span>
 
-                <h3 className="mt-4 text-xl font-bold">
-                  Understand
-                </h3>
+                <h3 className="mt-4 text-xl font-bold">Understand</h3>
 
                 <p className="mt-3 leading-7 text-muted-foreground">
                   We study local challenges and identify practical ways to
@@ -525,30 +474,22 @@ function AboutPage() {
 
             <Card className="border-border bg-card shadow-sm">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-secondary/40">
-                  03
-                </span>
+                <span className="text-4xl font-bold text-secondary/40">03</span>
 
-                <h3 className="mt-4 text-xl font-bold">
-                  Collaborate
-                </h3>
+                <h3 className="mt-4 text-xl font-bold">Collaborate</h3>
 
                 <p className="mt-3 leading-7 text-muted-foreground">
-                  We work with communities, volunteers and partners to
-                  implement solutions.
+                  We work with communities, volunteers and partners to implement
+                  solutions.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-border bg-card shadow-sm">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-primary/40">
-                  04
-                </span>
+                <span className="text-4xl font-bold text-primary/40">04</span>
 
-                <h3 className="mt-4 text-xl font-bold">
-                  Sustain
-                </h3>
+                <h3 className="mt-4 text-xl font-bold">Sustain</h3>
 
                 <p className="mt-3 leading-7 text-muted-foreground">
                   We focus on building capabilities that can continue creating
@@ -597,9 +538,7 @@ function AboutPage() {
 
           <h2 className="mt-3 text-3xl font-bold text-primary-foreground md:text-4xl">
             Together, We Can Create{" "}
-            <span className="text-secondary">
-              Meaningful Change
-            </span>
+            <span className="text-secondary">Meaningful Change</span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-7 text-primary-foreground/80">
