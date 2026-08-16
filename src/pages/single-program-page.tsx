@@ -69,11 +69,11 @@ function SingleProgramPage() {
         <div className="absolute inset-0 flex items-center">
           <div className="mx-auto w-full max-w-7xl px-6">
             <div className="max-w-3xl text-white">
-              <p className="font-semibold uppercase tracking-wider text-secondary">
+              <p className="font-semibold tracking-wider text-secondary uppercase">
                 {program.category}
               </p>
 
-              <h1 className="mt-4 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+              <h1 className="mt-4 text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
                 {program.title}
               </h1>
 
@@ -111,7 +111,7 @@ function SingleProgramPage() {
             ------------------------------------------------- */}
 
             <section>
-              <p className="font-semibold uppercase tracking-wider text-secondary">
+              <p className="font-semibold tracking-wider text-secondary uppercase">
                 About The Program
               </p>
 
@@ -136,7 +136,7 @@ function SingleProgramPage() {
             ------------------------------------------------- */}
 
             <section className="mt-14">
-              <p className="font-semibold uppercase tracking-wider text-secondary">
+              <p className="font-semibold tracking-wider text-secondary uppercase">
                 Our Goals
               </p>
 
@@ -167,7 +167,7 @@ function SingleProgramPage() {
             ------------------------------------------------- */}
 
             <section className="mt-14">
-              <p className="font-semibold uppercase tracking-wider text-secondary">
+              <p className="font-semibold tracking-wider text-secondary uppercase">
                 Field Work
               </p>
 
@@ -176,8 +176,8 @@ function SingleProgramPage() {
               </h2>
 
               <p className="mt-3 max-w-2xl leading-7 text-muted-foreground">
-                Our field activities focus on direct community participation
-                and practical implementation.
+                Our field activities focus on direct community participation and
+                practical implementation.
               </p>
 
               <div className="mt-7 grid gap-5 sm:grid-cols-2">
@@ -191,7 +191,7 @@ function SingleProgramPage() {
                         {String(index + 1).padStart(2, "0")}
                       </div>
 
-                      <p className="pt-1 font-medium leading-7 text-foreground">
+                      <p className="pt-1 leading-7 font-medium text-foreground">
                         {activity}
                       </p>
                     </div>
@@ -205,7 +205,7 @@ function SingleProgramPage() {
             ------------------------------------------------- */}
 
             <section className="mt-14">
-              <p className="font-semibold uppercase tracking-wider text-secondary">
+              <p className="font-semibold tracking-wider text-secondary uppercase">
                 Participation
               </p>
 
@@ -221,10 +221,7 @@ function SingleProgramPage() {
               <div className="mt-7 rounded-2xl border border-border bg-muted p-6 md:p-8">
                 <ul className="space-y-5">
                   {program.requirements.map((requirement) => (
-                    <li
-                      key={requirement}
-                      className="flex items-start gap-3"
-                    >
+                    <li key={requirement} className="flex items-start gap-3">
                       <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-primary" />
 
                       <span className="leading-7 text-foreground">
@@ -256,9 +253,7 @@ function SingleProgramPage() {
               {/* Category */}
 
               <div className="mt-7 border-b border-border pb-5">
-                <p className="text-sm text-muted-foreground">
-                  Category
-                </p>
+                <p className="text-sm text-muted-foreground">Category</p>
 
                 <p className="mt-1 font-semibold text-foreground">
                   {program.category}
@@ -268,9 +263,7 @@ function SingleProgramPage() {
               {/* Location */}
 
               <div className="border-b border-border py-5">
-                <p className="text-sm text-muted-foreground">
-                  Location
-                </p>
+                <p className="text-sm text-muted-foreground">Location</p>
 
                 <div className="mt-2 flex items-start gap-2">
                   <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />
@@ -296,9 +289,7 @@ function SingleProgramPage() {
               {/* Requirements */}
 
               <div className="py-5">
-                <p className="text-sm text-muted-foreground">
-                  Requirements
-                </p>
+                <p className="text-sm text-muted-foreground">Requirements</p>
 
                 <p className="mt-1 font-semibold text-foreground">
                   {program.requirements.length} Requirements
@@ -336,7 +327,7 @@ function SingleProgramPage() {
 
       <section className="bg-primary px-6 py-16 md:py-20">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="font-semibold uppercase tracking-wider text-secondary">
+          <p className="font-semibold tracking-wider text-secondary uppercase">
             Support Community Development
           </p>
 
