@@ -3,6 +3,11 @@ import { Button } from "./ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import { Link } from "react-router"
 
+// ADD IMAGES
+import aboutImage1 from "../assets/about/about1.jpg"
+import aboutImage2 from "../assets/about/about2.jpg"
+import aboutImage3 from "../assets/about/about3.jpg"
+
 function About() {
   return (
     <section id="about" className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
@@ -29,17 +34,29 @@ function About() {
         <div className="grid grid-cols-2 gap-4">
           {/* Large image */}
           <div className="overflow-hidden rounded-2xl border bg-muted">
-            <div className="aspect-3/4 w-full bg-muted" />
+            <img
+              src={aboutImage1}
+              alt="Community initiative"
+              className="aspect-3/4 w-full object-cover"
+            />
           </div>
 
           {/* Second image */}
           <div className="mt-10 overflow-hidden rounded-2xl border bg-muted">
-            <div className="aspect-3/4 w-full bg-muted" />
+            <img
+              src={aboutImage2}
+              alt="Women empowerment initiative"
+              className="aspect-3/4 w-full object-cover"
+            />
           </div>
 
           {/* Wide image */}
           <div className="col-span-2 overflow-hidden rounded-2xl border bg-muted">
-            <div className="aspect-3/1 w-full bg-muted" />
+            <img
+              src={aboutImage3}
+              alt="Community development initiative"
+              className="aspect-3/1 w-full object-cover"
+            />
           </div>
         </div>
 
