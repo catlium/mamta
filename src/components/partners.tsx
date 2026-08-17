@@ -6,6 +6,8 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel"
 
+import { Card, CardContent } from "@/components/ui/card"
+
 import techMahindra from "@/assets/partners/tech-mahindra.png"
 import skillsonics from "@/assets/partners/skillsonics.png"
 import unionBank from "@/assets/partners/union-bank.png"
@@ -35,7 +37,7 @@ const partners = [
     logo: johnson,
   },
   {
-    name: "HDFC Bank",
+    name: "Bisleri",
     logo: bisleri,
   },
 ]
@@ -65,13 +67,15 @@ function Partners() {
                 key={partner.name}
                 className="basis-1/2 md:basis-1/3 lg:basis-1/5"
               >
-                <div className="flex h-20 items-center justify-center rounded-xl border border-primary/10 bg-secondary/5 p-4 transition duration-300 hover:border-secondary/30 hover:bg-secondary/10">
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="h-12 w-auto object-contain transition duration-300 hover:scale-105"
-                  />
-                </div>
+                <Card>
+                  <CardContent className="flex h-20 items-center justify-center p-4">
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="h-12 w-auto object-contain"
+                    />
+                  </CardContent>
+                </Card>
               </CarouselItem>
             ))}
           </CarouselContent>
