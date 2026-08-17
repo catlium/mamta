@@ -79,9 +79,9 @@ function Hero() {
           {/* Description */}
           <p className="mt-7 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
             Mamta Samajeek Sansta works alongside communities across Maharashtra
-            to create meaningful change through education, healthcare,
-            womens empowerment, livelihood development, disaster relief,
-            and social justice.
+            to create meaningful change through education, healthcare, womens
+            empowerment, livelihood development, disaster relief, and social
+            justice.
           </p>
 
           {/* CTA */}
