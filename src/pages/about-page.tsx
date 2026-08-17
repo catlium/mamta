@@ -18,33 +18,38 @@ function AboutPage() {
       {/* =====================================================
           1. ABOUT MAMTA
       ===================================================== */}
-      <section className="px-6 py-20 md:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            {/* Left */}
-            <div>
-              <p className="font-semibold tracking-wide text-secondary uppercase">
-                About Mamta
-              </p>
+      <section className="relative overflow-hidden px-6 py-20 md:py-24">
+        {/* Background decoration */}
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_85%_20%,hsl(var(--primary)/0.10),transparent_30%)]" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_10%_90%,hsl(var(--secondary)/0.20),transparent_30%)]" />
 
-              <h1 className="mt-3 text-4xl leading-tight font-bold md:text-5xl">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+            {/* Left */}
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 rounded-full border bg-muted/50 px-4 py-2 text-sm font-medium text-muted-foreground backdrop-blur">
+                <span className="h-2 w-2 rounded-full bg-primary" />
+                About Mamta
+              </div>
+
+              <h1 className="mt-7 text-4xl leading-[1.08] font-black tracking-tight sm:text-5xl lg:text-6xl">
                 Working With Communities{" "}
-                <span className="text-primary">For A Better Tomorrow</span>
+                <span className="text-primary">For A Better Tomorrow.</span>
               </h1>
 
-              <p className="mt-6 leading-8 text-muted-foreground">
+              <p className="mt-7 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
                 Mamta Samajik Sanstha is a community-focused organization
                 working to create meaningful and lasting change in the lives of
                 people who need support and opportunity.
               </p>
 
-              <p className="mt-4 leading-8 text-muted-foreground">
+              <p className="mt-4 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
                 Since 2010, our work has been centered around understanding the
                 needs of communities and working alongside them to find
                 practical, sustainable solutions.
               </p>
 
-              <p className="mt-4 leading-8 text-muted-foreground">
+              <p className="mt-4 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
                 We believe that development is strongest when communities
                 participate in the process and have the confidence, resources
                 and opportunities to shape their own future.
@@ -52,10 +57,10 @@ function AboutPage() {
             </div>
 
             {/* Right */}
-            <div className="relative">
-              <div className="absolute -top-4 -right-4 h-full w-full rounded-3xl bg-secondary/20" />
+            <div className="relative mx-auto w-full max-w-lg">
+              <div className="absolute -top-4 -right-4 h-full w-full rounded-[2rem] bg-secondary/20" />
 
-              <div className="relative rounded-3xl bg-primary p-8 text-primary-foreground shadow-xl md:p-10">
+              <div className="relative rounded-[2rem] bg-primary p-8 text-primary-foreground shadow-xl md:p-10">
                 <Heart className="h-10 w-10 text-secondary" />
 
                 <h2 className="mt-6 text-3xl font-bold">People First</h2>
@@ -104,12 +109,11 @@ function AboutPage() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl leading-7 text-muted-foreground">
-              Our journey has been shaped by the people and communities we work
-              with.
+              Our journey has been shaped by the people and communities we
+              work with.
             </p>
           </div>
 
-          {/* Timeline */}
           <div className="relative">
             <div className="absolute top-0 bottom-0 left-5 hidden w-0.5 bg-secondary/40 md:block" />
 
@@ -120,11 +124,13 @@ function AboutPage() {
                   01
                 </div>
 
-                <Card className="mt-4 border-border bg-card shadow-sm md:mt-0">
+                <Card className="mt-4 border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg md:mt-0">
                   <CardContent className="p-6">
                     <p className="font-bold text-secondary">2010</p>
 
-                    <h3 className="mt-1 text-xl font-bold">The Beginning</h3>
+                    <h3 className="mt-1 text-xl font-bold">
+                      The Beginning
+                    </h3>
 
                     <p className="mt-3 leading-7 text-muted-foreground">
                       Mamta began its journey with a commitment to work
@@ -141,7 +147,7 @@ function AboutPage() {
                   02
                 </div>
 
-                <Card className="mt-4 border-border bg-card shadow-sm md:mt-0">
+                <Card className="mt-4 border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg md:mt-0">
                   <CardContent className="p-6">
                     <p className="font-bold text-primary">Growth</p>
 
@@ -164,7 +170,7 @@ function AboutPage() {
                   03
                 </div>
 
-                <Card className="mt-4 border-border bg-card shadow-sm md:mt-0">
+                <Card className="mt-4 border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg md:mt-0">
                   <CardContent className="p-6">
                     <p className="font-bold text-secondary">Today</p>
 
@@ -174,8 +180,9 @@ function AboutPage() {
 
                     <p className="mt-3 leading-7 text-muted-foreground">
                       Today, Mamta continues to work with communities,
-                      volunteers and partners to create solutions that encourage
-                      dignity, independence and sustainable development.
+                      volunteers and partners to create solutions that
+                      encourage dignity, independence and sustainable
+                      development.
                     </p>
                   </CardContent>
                 </Card>
@@ -188,31 +195,36 @@ function AboutPage() {
       {/* =====================================================
           3. WHY WE EXIST
       ===================================================== */}
-      <section className="px-6 py-20 md:py-24">
+      <section className="relative overflow-hidden px-6 py-20 md:py-24">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_90%_20%,hsl(var(--primary)/0.08),transparent_30%)]" />
+
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             {/* Text */}
             <div>
-              <p className="font-semibold tracking-wide text-secondary uppercase">
+              <div className="inline-flex items-center gap-2 rounded-full border bg-muted/50 px-4 py-2 text-sm font-medium text-muted-foreground">
+                <span className="h-2 w-2 rounded-full bg-secondary" />
                 Why We Exist
-              </p>
+              </div>
 
-              <h2 className="mt-3 text-3xl leading-tight font-bold md:text-4xl">
+              <h2 className="mt-6 text-3xl leading-tight font-black md:text-5xl">
                 Change Begins When{" "}
-                <span className="text-primary">People Get An Opportunity</span>
+                <span className="text-primary">
+                  People Get An Opportunity.
+                </span>
               </h2>
 
               <p className="mt-6 leading-8 text-muted-foreground">
                 Many communities continue to face challenges that limit access
-                to education, healthcare, safe sanitation, livelihoods and equal
-                opportunities.
+                to education, healthcare, safe sanitation, livelihoods and
+                equal opportunities.
               </p>
 
               <p className="mt-4 leading-8 text-muted-foreground">
-                We exist because these challenges should not determine someone's
-                future. We believe people deserve the opportunity to live with
-                dignity, make informed choices and build a better future for
-                themselves and their families.
+                We exist because these challenges should not determine
+                someone's future. We believe people deserve the opportunity to
+                live with dignity, make informed choices and build a better
+                future for themselves and their families.
               </p>
 
               <p className="mt-4 leading-8 text-muted-foreground">
@@ -224,7 +236,7 @@ function AboutPage() {
 
             {/* Cards */}
             <div className="grid gap-5 sm:grid-cols-2">
-              <Card className="border-border bg-secondary/10 shadow-sm">
+              <Card className="border-border bg-secondary/10 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                 <CardContent className="p-6">
                   <Target className="h-9 w-9 text-secondary" />
 
@@ -237,7 +249,7 @@ function AboutPage() {
                 </CardContent>
               </Card>
 
-              <Card className="border-border bg-primary/10 shadow-sm">
+              <Card className="border-border bg-primary/10 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                 <CardContent className="p-6">
                   <HandHeart className="h-9 w-9 text-primary" />
 
@@ -250,19 +262,20 @@ function AboutPage() {
                 </CardContent>
               </Card>
 
-              <Card className="border-border bg-primary/10 shadow-sm">
+              <Card className="border-border bg-primary/10 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                 <CardContent className="p-6">
                   <Users className="h-9 w-9 text-primary" />
 
                   <h3 className="mt-5 text-xl font-bold">Participation</h3>
 
                   <p className="mt-3 leading-7 text-muted-foreground">
-                    Involving communities in decisions that affect their future.
+                    Involving communities in decisions that affect their
+                    future.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-border bg-secondary/10 shadow-sm">
+              <Card className="border-border bg-secondary/10 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                 <CardContent className="p-6">
                   <Leaf className="h-9 w-9 text-secondary" />
 
@@ -282,8 +295,10 @@ function AboutPage() {
       {/* =====================================================
           4. OUR VALUES
       ===================================================== */}
-      <section className="bg-primary px-6 py-20 md:py-24">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden bg-primary px-6 py-20 md:py-24">
+        <div className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_50%_0%,hsl(var(--secondary)/0.15),transparent_35%)]" />
+
+        <div className="relative mx-auto max-w-7xl">
           <div className="mb-14 text-center">
             <p className="font-semibold tracking-wide text-secondary uppercase">
               Our Values
@@ -294,13 +309,13 @@ function AboutPage() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl leading-7 text-primary-foreground/80">
-              Our values shape the way we work with communities, volunteers and
-              partners.
+              Our values shape the way we work with communities, volunteers
+              and partners.
             </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-            <Card className="border-primary-foreground/10 bg-primary-foreground/10 text-primary-foreground">
+            <Card className="border-primary-foreground/10 bg-primary-foreground/10 text-primary-foreground transition hover:-translate-y-1 hover:bg-primary-foreground/15">
               <CardContent className="p-6">
                 <Heart className="h-8 w-8 text-secondary" />
 
@@ -312,7 +327,7 @@ function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-primary-foreground/10 bg-primary-foreground/10 text-primary-foreground">
+            <Card className="border-primary-foreground/10 bg-primary-foreground/10 text-primary-foreground transition hover:-translate-y-1 hover:bg-primary-foreground/15">
               <CardContent className="p-6">
                 <Scale className="h-8 w-8 text-secondary" />
 
@@ -324,7 +339,7 @@ function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-primary-foreground/10 bg-primary-foreground/10 text-primary-foreground">
+            <Card className="border-primary-foreground/10 bg-primary-foreground/10 text-primary-foreground transition hover:-translate-y-1 hover:bg-primary-foreground/15">
               <CardContent className="p-6">
                 <ShieldCheck className="h-8 w-8 text-secondary" />
 
@@ -336,7 +351,7 @@ function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-primary-foreground/10 bg-primary-foreground/10 text-primary-foreground">
+            <Card className="border-primary-foreground/10 bg-primary-foreground/10 text-primary-foreground transition hover:-translate-y-1 hover:bg-primary-foreground/15">
               <CardContent className="p-6">
                 <Leaf className="h-8 w-8 text-secondary" />
 
@@ -348,7 +363,7 @@ function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-primary-foreground/10 bg-primary-foreground/10 text-primary-foreground">
+            <Card className="border-primary-foreground/10 bg-primary-foreground/10 text-primary-foreground transition hover:-translate-y-1 hover:bg-primary-foreground/15">
               <CardContent className="p-6">
                 <Users className="h-8 w-8 text-secondary" />
 
@@ -384,7 +399,7 @@ function AboutPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            <Card className="border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <Card className="border-border bg-card shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
               <CardContent className="p-7">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary/15">
                   <Users className="h-8 w-8 text-secondary" />
@@ -399,7 +414,7 @@ function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <Card className="border-border bg-card shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
               <CardContent className="p-7">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/15">
                   <HandHeart className="h-8 w-8 text-primary" />
@@ -414,7 +429,7 @@ function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <Card className="border-border bg-card shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
               <CardContent className="p-7">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary/15">
                   <Heart className="h-8 w-8 text-secondary" />
@@ -442,13 +457,17 @@ function AboutPage() {
               Our Approach
             </p>
 
-            <h2 className="mt-2 text-3xl font-bold md:text-4xl">How We Work</h2>
+            <h2 className="mt-2 text-3xl font-bold md:text-4xl">
+              How We Work
+            </h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-4">
-            <Card className="border-border bg-card shadow-sm">
+            <Card className="border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-secondary/40">01</span>
+                <span className="text-4xl font-bold text-secondary/40">
+                  01
+                </span>
 
                 <h3 className="mt-4 text-xl font-bold">Listen</h3>
 
@@ -459,9 +478,11 @@ function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-border bg-card shadow-sm">
+            <Card className="border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-primary/40">02</span>
+                <span className="text-4xl font-bold text-primary/40">
+                  02
+                </span>
 
                 <h3 className="mt-4 text-xl font-bold">Understand</h3>
 
@@ -472,22 +493,26 @@ function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-border bg-card shadow-sm">
+            <Card className="border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-secondary/40">03</span>
+                <span className="text-4xl font-bold text-secondary/40">
+                  03
+                </span>
 
                 <h3 className="mt-4 text-xl font-bold">Collaborate</h3>
 
                 <p className="mt-3 leading-7 text-muted-foreground">
-                  We work with communities, volunteers and partners to implement
-                  solutions.
+                  We work with communities, volunteers and partners to
+                  implement solutions.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-border bg-card shadow-sm">
+            <Card className="border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-primary/40">04</span>
+                <span className="text-4xl font-bold text-primary/40">
+                  04
+                </span>
 
                 <h3 className="mt-4 text-xl font-bold">Sustain</h3>
 
@@ -506,23 +531,27 @@ function AboutPage() {
       ===================================================== */}
       <section className="px-6 py-20 md:py-24">
         <div className="mx-auto max-w-5xl">
-          <div className="rounded-3xl bg-secondary/10 p-8 text-center md:p-14">
-            <HandHeart className="mx-auto h-12 w-12 text-secondary" />
+          <div className="relative overflow-hidden rounded-[2rem] bg-secondary/10 p-8 text-center md:p-14">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,hsl(var(--secondary)/0.15),transparent_50%)]" />
 
-            <p className="mt-6 font-semibold tracking-wide text-secondary uppercase">
-              Our Commitment
-            </p>
+            <div className="relative">
+              <HandHeart className="mx-auto h-12 w-12 text-secondary" />
 
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-              Creating Change With Respect, Responsibility & Hope
-            </h2>
+              <p className="mt-6 font-semibold tracking-wide text-secondary uppercase">
+                Our Commitment
+              </p>
 
-            <p className="mx-auto mt-6 max-w-3xl leading-8 text-muted-foreground">
-              We are committed to working with communities with respect,
-              transparency and responsibility. Our goal is not simply to provide
-              support, but to help create opportunities through which people can
-              build stronger and more independent futures.
-            </p>
+              <h2 className="mt-3 text-3xl font-black md:text-4xl">
+                Creating Change With Respect, Responsibility & Hope
+              </h2>
+
+              <p className="mx-auto mt-6 max-w-3xl leading-8 text-muted-foreground">
+                We are committed to working with communities with respect,
+                transparency and responsibility. Our goal is not simply to
+                provide support, but to help create opportunities through which
+                people can build stronger and more independent futures.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -530,30 +559,31 @@ function AboutPage() {
       {/* =====================================================
           8. JOIN OUR JOURNEY
       ===================================================== */}
-      <section className="bg-primary px-6 py-20">
-        <div className="mx-auto max-w-4xl text-center">
+      <section className="relative overflow-hidden bg-primary px-6 py-20">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,hsl(var(--secondary)/0.15),transparent_40%)]" />
+
+        <div className="relative mx-auto max-w-4xl text-center">
           <p className="font-semibold tracking-wide text-secondary uppercase">
             Be A Part Of The Journey
           </p>
 
-          <h2 className="mt-3 text-3xl font-bold text-primary-foreground md:text-4xl">
+          <h2 className="mt-3 text-3xl font-black text-primary-foreground md:text-5xl">
             Together, We Can Create{" "}
-            <span className="text-secondary">Meaningful Change</span>
+            <span className="text-secondary">Meaningful Change.</span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-7 text-primary-foreground/80">
-            Whether through volunteering, partnerships, contributions or simply
-            spreading awareness, every effort can help strengthen communities
-            and create new possibilities.
+            Whether through volunteering, partnerships, contributions or
+            simply spreading awareness, every effort can help strengthen
+            communities and create new possibilities.
           </p>
 
-          {/* Get Involved Button */}
           <Link
             to="/contact"
-            className="mt-8 inline-flex items-center rounded-full bg-secondary px-7 py-3.5 text-base font-semibold text-secondary-foreground transition hover:bg-secondary/90"
+            className="group mt-8 inline-flex items-center rounded-full bg-secondary px-7 py-3.5 text-base font-semibold text-secondary-foreground transition hover:bg-secondary/90"
           >
             Get Involved
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </section>
