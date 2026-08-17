@@ -109,8 +109,8 @@ function AboutPage() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl leading-7 text-muted-foreground">
-              Our journey has been shaped by the people and communities we
-              work with.
+              Our journey has been shaped by the people and communities we work
+              with.
             </p>
           </div>
 
@@ -128,9 +128,7 @@ function AboutPage() {
                   <CardContent className="p-6">
                     <p className="font-bold text-secondary">2010</p>
 
-                    <h3 className="mt-1 text-xl font-bold">
-                      The Beginning
-                    </h3>
+                    <h3 className="mt-1 text-xl font-bold">The Beginning</h3>
 
                     <p className="mt-3 leading-7 text-muted-foreground">
                       Mamta began its journey with a commitment to work
@@ -180,9 +178,8 @@ function AboutPage() {
 
                     <p className="mt-3 leading-7 text-muted-foreground">
                       Today, Mamta continues to work with communities,
-                      volunteers and partners to create solutions that
-                      encourage dignity, independence and sustainable
-                      development.
+                      volunteers and partners to create solutions that encourage
+                      dignity, independence and sustainable development.
                     </p>
                   </CardContent>
                 </Card>
@@ -209,22 +206,20 @@ function AboutPage() {
 
               <h2 className="mt-6 text-3xl leading-tight font-black md:text-5xl">
                 Change Begins When{" "}
-                <span className="text-primary">
-                  People Get An Opportunity.
-                </span>
+                <span className="text-primary">People Get An Opportunity.</span>
               </h2>
 
               <p className="mt-6 leading-8 text-muted-foreground">
                 Many communities continue to face challenges that limit access
-                to education, healthcare, safe sanitation, livelihoods and
-                equal opportunities.
+                to education, healthcare, safe sanitation, livelihoods and equal
+                opportunities.
               </p>
 
               <p className="mt-4 leading-8 text-muted-foreground">
-                We exist because these challenges should not determine
-                someone's future. We believe people deserve the opportunity to
-                live with dignity, make informed choices and build a better
-                future for themselves and their families.
+                We exist because these challenges should not determine someone's
+                future. We believe people deserve the opportunity to live with
+                dignity, make informed choices and build a better future for
+                themselves and their families.
               </p>
 
               <p className="mt-4 leading-8 text-muted-foreground">
@@ -269,8 +264,7 @@ function AboutPage() {
                   <h3 className="mt-5 text-xl font-bold">Participation</h3>
 
                   <p className="mt-3 leading-7 text-muted-foreground">
-                    Involving communities in decisions that affect their
-                    future.
+                    Involving communities in decisions that affect their future.
                   </p>
                 </CardContent>
               </Card>
@@ -309,8 +303,8 @@ function AboutPage() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl leading-7 text-primary-foreground/80">
-              Our values shape the way we work with communities, volunteers
-              and partners.
+              Our values shape the way we work with communities, volunteers and
+              partners.
             </p>
           </div>
 
@@ -457,17 +451,13 @@ function AboutPage() {
               Our Approach
             </p>
 
-            <h2 className="mt-2 text-3xl font-bold md:text-4xl">
-              How We Work
-            </h2>
+            <h2 className="mt-2 text-3xl font-bold md:text-4xl">How We Work</h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-4">
             <Card className="border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-secondary/40">
-                  01
-                </span>
+                <span className="text-4xl font-bold text-secondary/40">01</span>
 
                 <h3 className="mt-4 text-xl font-bold">Listen</h3>
 
@@ -480,9 +470,7 @@ function AboutPage() {
 
             <Card className="border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-primary/40">
-                  02
-                </span>
+                <span className="text-4xl font-bold text-primary/40">02</span>
 
                 <h3 className="mt-4 text-xl font-bold">Understand</h3>
 
@@ -495,24 +483,20 @@ function AboutPage() {
 
             <Card className="border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-secondary/40">
-                  03
-                </span>
+                <span className="text-4xl font-bold text-secondary/40">03</span>
 
                 <h3 className="mt-4 text-xl font-bold">Collaborate</h3>
 
                 <p className="mt-3 leading-7 text-muted-foreground">
-                  We work with communities, volunteers and partners to
-                  implement solutions.
+                  We work with communities, volunteers and partners to implement
+                  solutions.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="p-6">
-                <span className="text-4xl font-bold text-primary/40">
-                  04
-                </span>
+                <span className="text-4xl font-bold text-primary/40">04</span>
 
                 <h3 className="mt-4 text-xl font-bold">Sustain</h3>
 
@@ -573,9 +557,9 @@ function AboutPage() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-7 text-primary-foreground/80">
-            Whether through volunteering, partnerships, contributions or
-            simply spreading awareness, every effort can help strengthen
-            communities and create new possibilities.
+            Whether through volunteering, partnerships, contributions or simply
+            spreading awareness, every effort can help strengthen communities
+            and create new possibilities.
           </p>
 
           <Link

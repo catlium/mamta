@@ -26,11 +26,9 @@ function ProgramsPage() {
 
           {/* Heading */}
           <h1 className="text-4xl leading-[1.08] font-black tracking-tight sm:text-5xl lg:text-6xl">
-            Our{" "}
-            <span className="text-primary">Programs.</span>
+            Our <span className="text-primary">Programs.</span>
             <br />
-            Creating{" "}
-            <span className="text-primary">Meaningful Change.</span>
+            Creating <span className="text-primary">Meaningful Change.</span>
           </h1>
 
           {/* Description */}
@@ -54,13 +52,12 @@ function ProgramsPage() {
             </p>
 
             <h2 className="mt-2 text-3xl leading-tight font-bold md:text-4xl">
-              Programs That{" "}
-              <span className="text-primary">Create Impact</span>
+              Programs That <span className="text-primary">Create Impact</span>
             </h2>
 
             <p className="mt-4 max-w-2xl leading-7 text-muted-foreground">
-              Explore our programs and learn how we work with communities
-              across different areas to create lasting change.
+              Explore our programs and learn how we work with communities across
+              different areas to create lasting change.
             </p>
           </div>
 
@@ -118,7 +115,6 @@ function ProgramsPage() {
                     className="group/link inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 font-medium text-primary-foreground transition-all duration-300 hover:bg-primary/90"
                   >
                     Learn More
-
                     <ArrowRight
                       size={18}
                       className="transition-transform duration-300 group-hover/link:translate-x-1"
@@ -163,7 +159,6 @@ function ProgramsPage() {
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary/90"
           >
             Support Our Work
-
             <ArrowRight
               size={18}
               className="transition-transform duration-300 group-hover:translate-x-1"

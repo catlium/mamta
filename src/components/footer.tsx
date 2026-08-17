@@ -15,22 +15,15 @@ function Footer() {
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           {/* Logo */}
           <Link to="/" className="text-center md:text-left">
-            <h1 className="text-2xl font-bold text-primary">
-              MAMTA
-            </h1>
+            <h1 className="text-2xl font-bold text-primary">MAMTA</h1>
 
-            <p className="text-xs text-secondary">
-              Samajik Sanstha
-            </p>
+            <p className="text-xs text-secondary">Samajik Sanstha</p>
           </Link>
 
           {/* Navigation */}
           <ul className="flex flex-wrap justify-center gap-6 font-medium text-foreground">
             <li>
-              <Link
-                to="/"
-                className="transition-colors hover:text-secondary"
-              >
+              <Link to="/" className="transition-colors hover:text-secondary">
                 Home
               </Link>
             </li>
@@ -118,15 +111,11 @@ function Footer() {
 
         {/* Bottom */}
         <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-border pt-5 text-sm text-muted-foreground md:flex-row">
-          <p>
-            © 2026 Mamta Samajik Sanstha. All Rights Reserved.
-          </p>
+          <p>© 2026 Mamta Samajik Sanstha. All Rights Reserved.</p>
 
           <p>
             Design & Developed By{" "}
-            <span className="font-semibold text-secondary">
-              CatLium
-            </span>
+            <span className="font-semibold text-secondary">CatLium</span>
           </p>
         </div>
       </div>
