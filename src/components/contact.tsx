@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone, Send } from "lucide-react"
+import { type FormEvent } from "react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
@@ -6,6 +7,23 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
 function Contact() {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    const form = e.currentTarget
+    const data = new FormData(form)
+    const name = data.get("name")
+    const email = data.get("email")
+    const phone = data.get("phone")
+    const subject = data.get("subject")
+    const message = data.get("message")
+
+    const body = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ASubject: ${subject}%0AMessage: ${message}`
+    window.open(
+      `mailto:mamtasamajeeksansta@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${body}`,
+      "_blank",
+    )
+    form.reset()
+  }
   return (
     <section id="contact" className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
       {/* Heading */}
@@ -60,10 +78,10 @@ function Contact() {
                 <p className="font-semibold">Phone</p>
 
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919867498367"
                   className="mt-1 block text-sm text-muted-foreground hover:text-primary"
                 >
-                  +91 98765 43210
+                  +91 98674 98367
                 </a>
               </div>
             </div>
@@ -78,10 +96,10 @@ function Contact() {
                 <p className="font-semibold">Email</p>
 
                 <a
-                  href="mailto:info@mamtango.org"
+                  href="mailto:mamtasamajeeksansta@gmail.com"
                   className="mt-1 block text-sm text-muted-foreground hover:text-primary"
                 >
-                  info@mamtango.org
+                  mamtasamajeeksansta@gmail.com
                 </a>
               </div>
             </div>
@@ -99,14 +117,14 @@ function Contact() {
           </CardHeader>
 
           <CardContent>
-            <form className="space-y-5">
+            <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
                     Full Name
                   </label>
 
-                  <Input id="name" type="text" placeholder="Your name" />
+                  <Input id="name" name="name" type="text" placeholder="Your name" />
                 </div>
 
                 <div className="space-y-2">
@@ -116,6 +134,7 @@ function Contact() {
 
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="you@example.com"
                   />
@@ -127,7 +146,7 @@ function Contact() {
                   Phone Number
                 </label>
 
-                <Input id="phone" type="tel" placeholder="+91 XXXXX XXXXX" />
+                  <Input id="phone" name="phone" type="tel" placeholder="+91 XXXXX XXXXX" />
               </div>
 
               <div className="space-y-2">
@@ -135,11 +154,12 @@ function Contact() {
                   Subject
                 </label>
 
-                <Input
-                  id="subject"
-                  type="text"
-                  placeholder="What would you like to discuss?"
-                />
+                  <Input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    placeholder="What would you like to discuss?"
+                  />
               </div>
 
               <div className="space-y-2">
@@ -149,6 +169,7 @@ function Contact() {
 
                 <Textarea
                   id="message"
+                  name="message"
                   rows={5}
                   placeholder="Write your message..."
                 />
