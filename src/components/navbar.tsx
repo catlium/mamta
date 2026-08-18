@@ -13,7 +13,7 @@ function Navbar() {
           <div>
             <h1 className="text-2xl font-bold text-primary">MAMTA</h1>
 
-            <p className="text-xs text-secondary">Samajik Sanstha</p>
+            <p className="text-xs text-secondary">Samajeek Sansta</p>
           </div>
         </Link>
 

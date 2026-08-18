@@ -38,7 +38,7 @@ function AboutPage() {
               </h1>
 
               <p className="mt-7 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-                Mamta Samajik Sanstha is a community-focused organization
+                Mamta Samajeek Sansta is a community-focused organization
                 working to create meaningful and lasting change in the lives of
                 people who need support and opportunity.
               </p>

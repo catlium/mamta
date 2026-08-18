@@ -73,7 +73,7 @@ function About() {
 
           <div className="mt-6 space-y-4 text-muted-foreground">
             <p className="leading-7">
-              Mamta Samajik Sanstha is a community-focused organization working
+              Mamta Samajeek Sansta is a community-focused organization working
               to improve the lives of people through education, healthcare,
               women's empowerment, livelihood development, social justice, and
               humanitarian support.
