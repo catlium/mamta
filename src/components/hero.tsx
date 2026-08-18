@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle } from "lucide-react"
+import { Link } from "react-router"
 import { Button } from "@/components/ui/button"
 
 import womenImage from "../assets/hero/women.jpg"
@@ -86,13 +87,17 @@ function Hero() {
 
           {/* CTA */}
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button size="lg" className="group rounded-full px-7">
-              Support Our Mission
-              <ArrowRight className="transition-transform group-hover:translate-x-1" />
+            <Button size="lg" className="group rounded-full px-7" asChild>
+              <Link to="/donate">
+                Support Our Mission
+                <ArrowRight className="transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
 
-            <Button size="lg" variant="outline" className="rounded-full px-7">
-              Explore Our Work
+            <Button size="lg" variant="outline" className="rounded-full px-7" asChild>
+              <Link to="/programs">
+                Explore Our Work
+              </Link>
             </Button>
           </div>
 
