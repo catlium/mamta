@@ -42,7 +42,7 @@ function ImpactCard({ icon, title, description, className }: ImpactCardProps) {
   )
 }
 
-function Programs() {
+function Challenges() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
       {/* Heading */}
@@ -118,4 +118,4 @@ function Programs() {
   )
 }
 
-export default Programs
+export default Challenges
