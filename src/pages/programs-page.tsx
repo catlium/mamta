@@ -156,7 +156,7 @@ function ProgramsPage() {
           {/* CTA */}
           <Link
             to="/donate"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary/90"
+            className="group mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary/90"
           >
             Support Our Work
             <ArrowRight
