@@ -17,7 +17,7 @@ function Footer() {
           <Link to="/" className="text-center md:text-left">
             <h1 className="text-2xl font-bold text-primary">MAMTA</h1>
 
-            <p className="text-xs text-secondary">Samajik Sanstha</p>
+            <p className="text-xs text-secondary">Samajeek Sansta</p>
           </Link>
 
           {/* Navigation */}
@@ -68,7 +68,7 @@ function Footer() {
           {/* Social Icons */}
           <div className="flex items-center gap-4 text-xl">
             <a
-              href="mailto:"
+              href="mailto:mamtasamajeeksansta@gmail.com"
               aria-label="Email"
               className="text-foreground transition-colors hover:text-secondary"
             >
@@ -76,7 +76,9 @@ function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://www.facebook.com/share/1Cyfpk3vsT/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="text-foreground transition-colors hover:text-secondary"
             >
@@ -84,7 +86,9 @@ function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://www.instagram.com/mamtasamajeeksansta2010?igsh=Y29wMGo2a2x1NGdu"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-foreground transition-colors hover:text-secondary"
             >
@@ -92,7 +96,9 @@ function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/mamta-samajeek-sansta-bb118b235?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="text-foreground transition-colors hover:text-secondary"
             >
@@ -100,7 +106,9 @@ function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://x.com/MamtaSamajeek10"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="X"
               className="text-foreground transition-colors hover:text-secondary"
             >
@@ -111,7 +119,7 @@ function Footer() {
 
         {/* Bottom */}
         <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-border pt-5 text-sm text-muted-foreground md:flex-row">
-          <p>© 2026 Mamta Samajik Sanstha. All Rights Reserved.</p>
+          <p>© 2026 Mamta Samajeek Sansta. All Rights Reserved.</p>
 
           <p>
             Design & Developed By{" "}
