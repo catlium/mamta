@@ -9,70 +9,121 @@ import { Link } from "react-router"
 
 function Footer() {
   return (
-    <footer className="bg-white px-6 py-8">
-      <div className="mx-auto max-w-7xl">
+    <footer className="border-t border-border bg-background text-foreground">
+      <div className="mx-auto max-w-7xl px-6 py-10">
         {/* Top */}
-        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           {/* Logo */}
-          <div>
-            <h1 className="text-2xl font-bold text-blue-600">MAMTA</h1>
-            <p className="text-xs text-orange-500">Samajik Sanstha</p>
-          </div>
+          <Link to="/" className="text-center md:text-left">
+            <h1 className="text-2xl font-bold text-primary">MAMTA</h1>
+
+            <p className="text-xs text-secondary">Samajeek Sansta</p>
+          </Link>
 
           {/* Navigation */}
-          <ul className="flex gap-10 font-medium text-gray-800">
+          <ul className="flex flex-wrap justify-center gap-6 font-medium text-foreground">
             <li>
-              <Link to="/" className="transition hover:text-orange-500">
+              <Link to="/" className="transition-colors hover:text-secondary">
                 Home
               </Link>
             </li>
 
             <li>
-              <Link to="/about" className="transition hover:text-orange-500">
+              <Link
+                to="/about"
+                className="transition-colors hover:text-secondary"
+              >
                 About
               </Link>
             </li>
 
             <li>
-              <Link to="/programs" className="transition hover:text-orange-500">
+              <Link
+                to="/programs"
+                className="transition-colors hover:text-secondary"
+              >
                 Programs
               </Link>
             </li>
 
             <li>
-              <Link to="/contact" className="transition hover:text-orange-500">
+              <Link
+                to="/contact"
+                className="transition-colors hover:text-secondary"
+              >
                 Contact
               </Link>
             </li>
 
             <li>
-              <Link to="/donate" className="transition hover:text-orange-500">
+              <Link
+                to="/donate"
+                className="transition-colors hover:text-secondary"
+              >
                 Donate
               </Link>
             </li>
           </ul>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-4 text-2xl">
-            <Mail className="cursor-pointer text-gray-700 transition duration-300 hover:text-orange-500" />
+          <div className="flex items-center gap-4 text-xl">
+            <a
+              href="mailto:mamtasamajeeksansta@gmail.com"
+              aria-label="Email"
+              className="text-foreground transition-colors hover:text-secondary"
+            >
+              <Mail />
+            </a>
 
-            <FaFacebook className="cursor-pointer text-blue-600 transition duration-300 hover:scale-110" />
+            <a
+              href="https://www.facebook.com/share/1Cyfpk3vsT/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="text-foreground transition-colors hover:text-secondary"
+            >
+              <FaFacebook />
+            </a>
 
-            <FaInstagram className="cursor-pointer text-pink-500 transition duration-300 hover:scale-110" />
+            <a
+              href="https://www.instagram.com/mamtasamajeeksansta2010?igsh=Y29wMGo2a2x1NGdu"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="text-foreground transition-colors hover:text-secondary"
+            >
+              <FaInstagram />
+            </a>
 
-            <FaLinkedin className="cursor-pointer text-blue-700 transition duration-300 hover:scale-110" />
+            <a
+              href="https://www.linkedin.com/in/mamta-samajeek-sansta-bb118b235?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-foreground transition-colors hover:text-secondary"
+            >
+              <FaLinkedin />
+            </a>
 
-            <FaXTwitter className="cursor-pointer text-gray-900 transition duration-300 hover:scale-110" />
+            <a
+              href="https://x.com/MamtaSamajeek10"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="text-foreground transition-colors hover:text-secondary"
+            >
+              <FaXTwitter />
+            </a>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="mt-6 flex flex-col items-center justify-between border-t border-gray-200 pt-4 text-sm text-gray-700 md:flex-row">
-          <p>© 2026 Mamta Samajik Sanstha. All Rights Reserved.</p>
+        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-border pt-5 text-sm text-muted-foreground md:flex-row">
+          <p>© 2026 Mamta Samajeek Sansta. All Rights Reserved.</p>
 
           <p>
             Design & Developed By{" "}
-            <span className="font-semibold text-orange-500">CatLium</span>
+            <span className="font-semibold text-secondary">CatLium</span>
           </p>
         </div>
       </div>

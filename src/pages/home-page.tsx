@@ -1,10 +1,9 @@
-import Hero from "../components/hero"
+import Hero from "@/components/hero"
 import Partners from "@/components/partners"
-import Impact from "../components/impact"
-import About from "../components/about"
-import ProgramsSection from "../components/programs-section"
-import Contact from "../components/contact"
-import DonatePage from "@/components/donate"
+import Impact from "@/components/impact"
+import About from "@/components/about"
+import ProgramsSection from "@/components/programs-section"
+import Contact from "@/components/contact"
 
 function HomePage() {
   return (
@@ -15,7 +14,6 @@ function HomePage() {
       <About />
       <ProgramsSection />
       <Contact />
-      <DonatePage />
     </>
   )
 }

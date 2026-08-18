@@ -1,130 +1,145 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
-import { Link } from "react-router"
+import { Link, NavLink } from "react-router"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white shadow-md">
-      {/* Logo */}
+    <nav className="sticky top-0 z-50 border-b bg-background">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-3">
-          <img
-            src="/logo.png"
-            alt="Mamta Logo"
-            className="h-12 w-12 rounded-full object-cover"
-          />
-
+        {/* Logo */}
+        <Link to="/" onClick={() => setIsOpen(false)}>
           <div>
-            <h1 className="text-2xl font-bold text-blue-600">MAMTA</h1>
+            <h1 className="text-2xl font-bold text-primary">MAMTA</h1>
 
-            <p className="text-xs text-orange-500">Samajik Sanstha</p>
+            <p className="text-xs text-secondary">Samajeek Sansta</p>
           </div>
         </Link>
 
-        {/* Desktop Menu */}
+        {/* Desktop Navigation */}
         <ul className="hidden items-center gap-8 font-medium md:flex">
           <li>
-            <Link
+            <NavLink
               to="/"
-              className="text-gray-700 transition duration-300 hover:text-orange-500"
+              className={({ isActive }) =>
+                `transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+              }
             >
               Home
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link
+            <NavLink
               to="/about"
-              className="text-gray-700 transition duration-300 hover:text-orange-500"
+              className={({ isActive }) =>
+                `transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+              }
             >
               About
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link
+            <NavLink
               to="/programs"
-              className="text-gray-700 transition duration-300 hover:text-orange-500"
+              className={({ isActive }) =>
+                `transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+              }
             >
               Programs
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link
+            <NavLink
               to="/contact"
-              className="text-gray-700 transition duration-300 hover:text-orange-500"
+              className={({ isActive }) =>
+                `transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+              }
             >
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
 
         {/* Donate Button */}
         <Link
           to="/donate"
-          className="hidden rounded-full bg-orange-500 px-6 py-3 text-white transition duration-300 hover:bg-orange-600 md:block"
+          className="hidden rounded-full bg-secondary px-6 py-3 font-medium text-secondary-foreground transition hover:opacity-90 md:block"
         >
           Donate Us
         </Link>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-foreground md:hidden"
+          aria-label="Toggle navigation menu"
+        >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="bg-white px-6 py-5 shadow-lg md:hidden">
+        <div className="border-t bg-background px-6 py-5 shadow-md md:hidden">
           <ul className="flex flex-col gap-5 font-medium">
             <li>
-              <Link
+              <NavLink
                 to="/"
                 onClick={() => setIsOpen(false)}
-                className="text-gray-700 transition hover:text-orange-500"
+                className={({ isActive }) =>
+                  `block transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+                }
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link
+              <NavLink
                 to="/about"
                 onClick={() => setIsOpen(false)}
-                className="text-gray-700 transition hover:text-orange-500"
+                className={({ isActive }) =>
+                  `block transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+                }
               >
                 About
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link
+              <NavLink
                 to="/programs"
                 onClick={() => setIsOpen(false)}
-                className="text-gray-700 transition hover:text-orange-500"
+                className={({ isActive }) =>
+                  `block transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+                }
               >
                 Programs
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link
+              <NavLink
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="text-gray-700 transition hover:text-orange-500"
+                className={({ isActive }) =>
+                  `block transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+                }
               >
                 Contact
-              </Link>
+              </NavLink>
             </li>
 
             <li>
               <Link
                 to="/donate"
                 onClick={() => setIsOpen(false)}
-                className="block w-full rounded-full bg-orange-500 py-3 text-center text-white transition hover:bg-orange-600"
+                className="block w-full rounded-full bg-secondary py-3 text-center font-medium text-secondary-foreground transition hover:opacity-90"
               >
                 Donate Us
               </Link>

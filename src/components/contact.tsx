@@ -1,109 +1,197 @@
-import { MapPin, Phone, Mail, Send } from "lucide-react"
+import { Mail, MapPin, Phone, Send } from "lucide-react"
+import { type FormEvent } from "react"
+
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 
 function Contact() {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    const form = e.currentTarget
+    const data = new FormData(form)
+    const name = data.get("name")
+    const email = data.get("email")
+    const phone = data.get("phone")
+    const subject = data.get("subject")
+    const message = data.get("message")
+
+    const body = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ASubject: ${subject}%0AMessage: ${message}`
+    window.open(
+      `mailto:mamtasamajeeksansta@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${body}`,
+      "_blank"
+    )
+    form.reset()
+  }
   return (
-    <section id="contact" className="bg-[#0B3D91] px-6 py-20">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
-        {/* Contact Form */}
-        <div className="rounded-3xl bg-white p-8 shadow-2xl">
-          <p className="font-semibold text-orange-500 uppercase">Contact Us</p>
+    <section id="contact" className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
+      {/* Heading */}
+      <div className="mx-auto mb-14 max-w-3xl text-center">
+        <p className="mb-3 text-sm font-medium tracking-widest text-primary uppercase">
+          Get In Touch
+        </p>
 
-          <h2 className="mt-2 mb-8 text-4xl font-bold text-black">
-            Get In Touch
-          </h2>
+        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          Let's Create <span className="text-primary">Impact Together.</span>
+        </h2>
 
-          <form className="space-y-5">
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full rounded-xl border border-gray-300 p-4 text-black placeholder:text-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none"
-            />
+        <p className="mt-5 text-lg leading-8 text-muted-foreground">
+          Whether you want to support our work, partner with us, volunteer, or
+          simply learn more about our initiatives, we'd love to hear from you.
+        </p>
+      </div>
 
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full rounded-xl border border-gray-300 p-4 text-black placeholder:text-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none"
-            />
+      {/* Content */}
+      <div className="grid items-start gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        {/* Contact Information */}
+        <div>
+          <h3 className="text-2xl font-bold">We'd love to hear from you.</h3>
 
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              className="w-full rounded-xl border border-gray-300 p-4 text-black placeholder:text-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none"
-            />
-
-            <input
-              type="text"
-              placeholder="Subject"
-              className="w-full rounded-xl border border-gray-300 p-4 text-black placeholder:text-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none"
-            />
-
-            <textarea
-              rows={5}
-              placeholder="Your Message"
-              className="w-full rounded-xl border border-gray-300 p-4 text-black placeholder:text-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none"
-            ></textarea>
-
-            <button
-              type="submit"
-              className="flex items-center gap-2 rounded-full bg-orange-500 px-8 py-4 text-white transition hover:bg-orange-600"
-            >
-              Send Message
-              <Send size={18} />
-            </button>
-          </form>
-        </div>
-
-        {/* Contact Info */}
-        <div className="text-white">
-          <p className="font-semibold text-orange-400 uppercase">
-            Let's Connect
+          <p className="mt-4 leading-7 text-muted-foreground">
+            Have a question about our programs or want to explore an opportunity
+            to work together? Reach out to our team.
           </p>
 
-          <h2 className="mt-4 text-5xl font-bold">
-            Let's Create Impact Together
-          </h2>
-
-          <p className="mt-6 leading-8 text-blue-100">
-            Whether you'd like to support our mission, partner with us,
-            volunteer, or learn more about our programs, we'd love to hear from
-            you.
-          </p>
-
-          <div className="mt-10 space-y-6">
-            <div className="flex items-center gap-4">
-              <div className="rounded-full bg-orange-500 p-3">
-                <MapPin />
+          <div className="mt-8 space-y-6">
+            {/* Address */}
+            <div className="flex items-start gap-4">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <MapPin className="h-5 w-5" />
               </div>
 
               <div>
-                <h3 className="font-semibold">Address</h3>
-                <p className="text-blue-100">Nagpur, Maharashtra, India</p>
+                <p className="font-semibold">Address</p>
+                <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                  Nagpur, Maharashtra, India
+                </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="rounded-full bg-orange-500 p-3">
-                <Phone />
+            {/* Phone */}
+            <div className="flex items-start gap-4">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-secondary/20 text-secondary-foreground">
+                <Phone className="h-5 w-5" />
               </div>
 
               <div>
-                <h3 className="font-semibold">Phone</h3>
-                <p className="text-blue-100">+91 98765 43210</p>
+                <p className="font-semibold">Phone</p>
+
+                <a
+                  href="tel:+919867498367"
+                  className="mt-1 block text-sm text-muted-foreground hover:text-primary"
+                >
+                  +91 98674 98367
+                </a>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="rounded-full bg-orange-500 p-3">
-                <Mail />
+            {/* Email */}
+            <div className="flex items-start gap-4">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Mail className="h-5 w-5" />
               </div>
 
               <div>
-                <h3 className="font-semibold">Email</h3>
-                <p className="text-blue-100">info@mamtango.org</p>
+                <p className="font-semibold">Email</p>
+
+                <a
+                  href="mailto:mamtasamajeeksansta@gmail.com"
+                  className="mt-1 block text-sm text-muted-foreground hover:text-primary"
+                >
+                  mamtasamajeeksansta@gmail.com
+                </a>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Contact Form */}
+        <Card>
+          <CardHeader>
+            <h3 className="text-xl font-semibold">Send us a message</h3>
+
+            <p className="text-sm text-muted-foreground">
+              Fill in the details below and our team will get back to you.
+            </p>
+          </CardHeader>
+
+          <CardContent>
+            <form className="space-y-5" onSubmit={handleSubmit}>
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-sm font-medium">
+                    Full Name
+                  </label>
+
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="email" className="text-sm font-medium">
+                    Email Address
+                  </label>
+
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <label htmlFor="phone" className="text-sm font-medium">
+                  Phone Number
+                </label>
+
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="+91 XXXXX XXXXX"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label htmlFor="subject" className="text-sm font-medium">
+                  Subject
+                </label>
+
+                <Input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder="What would you like to discuss?"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-sm font-medium">
+                  Message
+                </label>
+
+                <Textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  placeholder="Write your message..."
+                />
+              </div>
+
+              <Button type="submit" className="rounded-full">
+                Send Message
+                <Send />
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
       </div>
     </section>
   )

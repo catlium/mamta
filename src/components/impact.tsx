@@ -7,102 +7,115 @@ import {
   TriangleAlert,
   Heart,
 } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "./ui/card"
 
-type CardProps = {
+type ImpactCardProps = {
   icon: React.ReactNode
   title: string
   description: string
+  className?: string
 }
 
-function ImpactCard({ icon, title, description }: CardProps) {
+function ImpactCard({ icon, title, description, className }: ImpactCardProps) {
   return (
-    <Card className="py-2">
-      <CardHeader className="pb-2">
-        <CardTitle className="flex items-center gap-2 text-orange-500">
-          {icon} <span>{title}</span>
-        </CardTitle>
+    <Card className={className}>
+      <CardHeader>
+        <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+          {icon}
+        </div>
+
+        <CardTitle>{title}</CardTitle>
       </CardHeader>
 
-      <CardContent className="pt-0">{description}</CardContent>
+      <CardContent>
+        <CardDescription className="text-sm leading-6">
+          {description}
+        </CardDescription>
+      </CardContent>
     </Card>
   )
 }
 
-function Programs() {
+function Challenges() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-10">
+    <section className="mx-auto max-w-7xl px-6 py-20">
       {/* Heading */}
-      <h2 className="mb-8 text-center text-4xl font-bold text-orange-500">
-        Creating Measurable Change
-      </h2>
+      <div className="mx-auto mb-12 max-w-3xl text-center">
+        <p className="mb-3 text-sm font-medium tracking-widest text-primary uppercase">
+          Where Change Begins
+        </p>
 
-      {/* Row 1 */}
-      <div className="mb-5 grid gap-5 md:grid-cols-2">
+        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          The Challenges We{" "}
+          <span className="text-primary">Work to Change.</span>
+        </h2>
+
+        <p className="mt-5 text-lg leading-8 text-muted-foreground">
+          Communities face challenges that affect their health, education,
+          livelihoods, safety, and dignity. Our work focuses on addressing these
+          challenges and creating opportunities for a better future.
+        </p>
+      </div>
+
+      {/* Bento Grid */}
+      <div className="grid gap-5 md:grid-cols-4 md:grid-rows-2">
+        {/* Large card */}
         <ImpactCard
-          icon={<Home size={28} />}
-          title="Poor House"
-          description="Families continue living in temporary
-          mud houses vulnerable to rain, floods,
-          and harsh weather. Unsafe housing
-          impacts children's education and 
-          overall health."
+          className="md:col-span-2 md:row-span-2"
+          icon={<Home className="h-6 w-6" />}
+          title="Safe & Dignified Housing"
+          description="Families continue living in temporary mud houses vulnerable to rain, floods, and harsh weather. Unsafe housing affects children's education, family health, and overall quality of life."
         />
 
+        {/* Wide card */}
         <ImpactCard
-          icon={<School size={28} />}
+          className="md:col-span-2"
+          icon={<School className="h-6 w-6" />}
           title="School Sanitation"
-          description="Families continue living in temporary
-          mud houses vulnerable to Many rural schools lack proper sanitation 
-          facilities, especially for adolescent girls, leading to
-          absenteeism and school dropouts."
+          description="Many rural schools lack proper sanitation facilities, especially for adolescent girls, leading to absenteeism and school dropouts."
         />
-      </div>
 
-      {/* Row 2 */}
-      <div className="mb-5 grid gap-5 md:grid-cols-3">
+        {/* Small cards */}
         <ImpactCard
-          icon={<HandCoins size={28} />}
-          title="Sustainable Livelihood"
-          description="Many families lose their primary source of income due to poverty,crop failure, or social challenges. 
-          Limited employment opportunities leave households struggling to meet basic needs."
+          icon={<HandCoins className="h-6 w-6" />}
+          title="Sustainable Livelihoods"
+          description="Limited employment opportunities and financial insecurity leave families struggling to meet their basic needs."
         />
 
         <ImpactCard
-          icon={<Tractor size={28} />}
-          title="Farmer Challenge"
-          description="Small farmers often lack irrigation, financial resources, and modern equipment,
-          making cultivation difficult and increasing financial stress."
+          icon={<Tractor className="h-6 w-6" />}
+          title="Farmer Challenges"
+          description="Small farmers often lack irrigation, financial resources, and modern equipment, increasing financial stress."
         />
 
+        {/* Bottom row */}
         <ImpactCard
-          icon={<Heart size={28} />}
-          title="Women's Sanitation"
-          description="Lack of toilets and private sanitation facilities 
-          puts women and girls at risk, affecting their health,
-          dignity, and safety every single day."
-        />
-      </div>
-
-      {/* Row 3 */}
-      <div className="grid gap-5 md:grid-cols-2">
-        <ImpactCard
-          icon={<Droplets size={28} />}
+          icon={<Droplets className="h-6 w-6" />}
           title="Water Scarcity"
-          description="Thousands of women and adolescent girls walk several kilometers every day carrying heavy water containers.
-          This daily struggle affects their health, education, and productivity while consuming valuable time that could otherwise
-          be spent on work or school"
+          description="Women and girls often spend hours collecting water, affecting their health, education, and livelihoods."
         />
 
         <ImpactCard
-          icon={<TriangleAlert size={28} />}
+          icon={<TriangleAlert className="h-6 w-6" />}
           title="Unsafe Drinking Water"
-          description="Many rural families rely on contaminated wells and untreated water sources 
-          containing bacteria and harmful minerals. Unsafe drinking water contributes to illness, poor health, and reduced quality of life."
+          description="Communities relying on contaminated water sources face preventable illness and long-term health challenges."
+        />
+
+        <ImpactCard
+          className="md:col-span-2"
+          icon={<Heart className="h-6 w-6" />}
+          title="Women's Health & Dignity"
+          description="Limited access to private sanitation facilities affects the health, safety, and dignity of women and girls."
         />
       </div>
     </section>
   )
 }
 
-export default Programs
+export default Challenges

@@ -4,13 +4,18 @@ import Footer from "./footer"
 
 const MainLayout = () => {
   return (
-    <>
-      <Navbar />
-      <main className="container mx-auto overflow-hidden">
-        <Outlet />
-      </main>
-      <Footer />
-    </>
+    <div className="relative min-h-screen overflow-hidden bg-background">
+      {/* Content */}
+      <div className="relative z-10">
+        <Navbar />
+
+        <main className="w-full">
+          <Outlet />
+        </main>
+
+        <Footer />
+      </div>
+    </div>
   )
 }
 
