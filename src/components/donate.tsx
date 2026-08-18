@@ -21,7 +21,7 @@ const NGO_NAME = "Mamta Samajeek Sansta"
 
 const predefinedAmounts = ["99", "249", "499", "999", "1999"]
 
-function DonatePage() {
+function Donate() {
   const [selectedAmount, setSelectedAmount] = useState("")
   const [isCustom, setIsCustom] = useState(false)
 
@@ -283,4 +283,4 @@ function DonatePage() {
   )
 }
 
-export default DonatePage
+export default Donate
