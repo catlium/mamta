@@ -20,7 +20,7 @@ function Contact() {
     const body = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ASubject: ${subject}%0AMessage: ${message}`
     window.open(
       `mailto:mamtasamajeeksansta@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${body}`,
-      "_blank",
+      "_blank"
     )
     form.reset()
   }
@@ -124,7 +124,12 @@ function Contact() {
                     Full Name
                   </label>
 
-                  <Input id="name" name="name" type="text" placeholder="Your name" />
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                  />
                 </div>
 
                 <div className="space-y-2">
@@ -146,7 +151,12 @@ function Contact() {
                   Phone Number
                 </label>
 
-                  <Input id="phone" name="phone" type="tel" placeholder="+91 XXXXX XXXXX" />
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="+91 XXXXX XXXXX"
+                />
               </div>
 
               <div className="space-y-2">
@@ -154,12 +164,12 @@ function Contact() {
                   Subject
                 </label>
 
-                  <Input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    placeholder="What would you like to discuss?"
-                  />
+                <Input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder="What would you like to discuss?"
+                />
               </div>
 
               <div className="space-y-2">
