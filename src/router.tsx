@@ -5,7 +5,7 @@ import AboutPage from "./pages/about-page"
 import ProgramsPage from "./pages/programs-page"
 import ContactPage from "./pages/contact-page"
 import MainLayout from "./components/main-layout"
-import DonatePage from "./components/donate"
+import DonatePage from "./pages/donate-page"
 import SingleProgramPage from "./pages/single-program-page"
 
 export const router = createBrowserRouter([
@@ -42,7 +42,6 @@ export const router = createBrowserRouter([
         path: "donate",
         Component: DonatePage,
       },
-      {},
     ],
   },
 ])
