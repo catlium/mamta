@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
-import { Link } from "react-router"
+import { Link, NavLink } from "react-router"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,39 +20,47 @@ function Navbar() {
         {/* Desktop Navigation */}
         <ul className="hidden items-center gap-8 font-medium md:flex">
           <li>
-            <Link
+            <NavLink
               to="/"
-              className="text-foreground transition hover:text-secondary"
+              className={({ isActive }) =>
+                `transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+              }
             >
               Home
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link
+            <NavLink
               to="/about"
-              className="text-foreground transition hover:text-secondary"
+              className={({ isActive }) =>
+                `transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+              }
             >
               About
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link
+            <NavLink
               to="/programs"
-              className="text-foreground transition hover:text-secondary"
+              className={({ isActive }) =>
+                `transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+              }
             >
               Programs
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link
+            <NavLink
               to="/contact"
-              className="text-foreground transition hover:text-secondary"
+              className={({ isActive }) =>
+                `transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+              }
             >
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
 
@@ -80,43 +88,51 @@ function Navbar() {
         <div className="border-t bg-background px-6 py-5 shadow-md md:hidden">
           <ul className="flex flex-col gap-5 font-medium">
             <li>
-              <Link
+              <NavLink
                 to="/"
                 onClick={() => setIsOpen(false)}
-                className="block text-foreground transition hover:text-secondary"
+                className={({ isActive }) =>
+                  `block transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+                }
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link
+              <NavLink
                 to="/about"
                 onClick={() => setIsOpen(false)}
-                className="block text-foreground transition hover:text-secondary"
+                className={({ isActive }) =>
+                  `block transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+                }
               >
                 About
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link
+              <NavLink
                 to="/programs"
                 onClick={() => setIsOpen(false)}
-                className="block text-foreground transition hover:text-secondary"
+                className={({ isActive }) =>
+                  `block transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+                }
               >
                 Programs
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link
+              <NavLink
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block text-foreground transition hover:text-secondary"
+                className={({ isActive }) =>
+                  `block transition hover:text-secondary ${isActive ? "text-secondary" : "text-foreground"}`
+                }
               >
                 Contact
-              </Link>
+              </NavLink>
             </li>
 
             <li>
