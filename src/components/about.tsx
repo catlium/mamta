@@ -133,7 +133,7 @@ function About() {
           </div>
 
           {/* CTA */}
-           <Button variant="link" className="mt-8 rounded-full p-4">
+          <Button variant="link" className="mt-8 rounded-full p-4">
             <Link to="/about" className="flex items-center gap-2">
               Learn More About Our Work
               <ArrowRight />

@@ -94,11 +94,7 @@ function Hero() {
               </Link>
             </Button>
 
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-full px-7"
-            >
+            <Button size="lg" variant="outline" className="rounded-full px-7">
               <Link to="/programs">Explore Our Work</Link>
             </Button>
           </div>
