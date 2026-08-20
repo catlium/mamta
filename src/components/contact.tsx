@@ -109,9 +109,17 @@ function Contact() {
                 action="https://formsubmit.co/mamtasamajeeksansta@gmail.com"
                 method="POST"
               >
-                <input type="hidden" name="_next" value={window.location.href} />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value={window.location.href}
+                />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_subject" value="New Contact Form Submission" />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Contact Form Submission"
+                />
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">
