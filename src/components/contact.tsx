@@ -25,7 +25,8 @@ function Contact() {
     form.reset()
   }
   return (
-    <section id="contact" className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
+    <>
+      <section id="contact" className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
       {/* Heading */}
       <div className="mx-auto mb-14 max-w-3xl text-center">
         <p className="mb-3 text-sm font-medium tracking-widest text-primary uppercase">
@@ -63,6 +64,10 @@ function Contact() {
               <div>
                 <p className="font-semibold">Address</p>
                 <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                  Shivraj Bhavan, Building No. 2, Room No. 88,
+                  <br />
+                  B.M. Marg, Elphinston Road,
+                  <br />
                   Nagpur, Maharashtra, India
                 </p>
               </div>
@@ -194,6 +199,37 @@ function Contact() {
         </Card>
       </div>
     </section>
+
+      {/* Google Map */}
+      <section className="mx-auto max-w-7xl px-6 pb-20 sm:pb-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-3 text-sm font-medium tracking-widest text-primary uppercase">
+            Find Us
+          </p>
+
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            Our <span className="text-primary">Location</span>
+          </h2>
+
+          <p className="mt-5 text-lg leading-8 text-muted-foreground">
+            Visit us at our office in Nagpur, Maharashtra.
+          </p>
+        </div>
+
+        <div className="mt-10 overflow-hidden rounded-2xl border border-border shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.234567890123!2d79.0800!3d21.1458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a00000001%3A0x0000000000000000!2sElphinston%20Road%2C%20Nagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Mamta Samajeek Sansta Office Location"
+          />
+        </div>
+      </section>
+    </>
   )
 }
 
