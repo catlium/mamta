@@ -7,11 +7,14 @@ import ContactPage from "./pages/contact-page"
 import MainLayout from "./components/main-layout"
 import DonatePage from "./pages/donate-page"
 import SingleProgramPage from "./pages/single-program-page"
+import NotFoundPage from "./pages/not-found-page"
+import ErrorPage from "./pages/error-page"
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -41,6 +44,10 @@ export const router = createBrowserRouter([
       {
         path: "donate",
         Component: DonatePage,
+      },
+      {
+        path: "*",
+        Component: NotFoundPage,
       },
     ],
   },

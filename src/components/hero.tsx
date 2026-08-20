@@ -87,7 +87,7 @@ function Hero() {
 
           {/* CTA */}
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button size="lg" className="group rounded-full px-7" asChild>
+            <Button size="lg" className="group rounded-full px-7">
               <Link to="/donate">
                 Support Our Mission
                 <ArrowRight className="transition-transform group-hover:translate-x-1" />
@@ -98,7 +98,6 @@ function Hero() {
               size="lg"
               variant="outline"
               className="rounded-full px-7"
-              asChild
             >
               <Link to="/programs">Explore Our Work</Link>
             </Button>
