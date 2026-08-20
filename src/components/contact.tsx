@@ -1,5 +1,4 @@
 import { Mail, MapPin, Phone, Send } from "lucide-react"
-import { type FormEvent } from "react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
@@ -7,23 +6,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
 function Contact() {
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    const form = e.currentTarget
-    const data = new FormData(form)
-    const name = data.get("name")
-    const email = data.get("email")
-    const phone = data.get("phone")
-    const subject = data.get("subject")
-    const message = data.get("message")
-
-    const body = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ASubject: ${subject}%0AMessage: ${message}`
-    window.open(
-      `mailto:mamtasamajeeksansta@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${body}`,
-      "_blank"
-    )
-    form.reset()
-  }
   return (
     <>
       <section id="contact" className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
@@ -122,7 +104,14 @@ function Contact() {
             </CardHeader>
 
             <CardContent>
-              <form className="space-y-5" onSubmit={handleSubmit}>
+              <form
+                className="space-y-5"
+                action="https://formsubmit.co/mamtasamajeeksansta@gmail.com"
+                method="POST"
+              >
+                <input type="hidden" name="_next" value={window.location.href} />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_subject" value="New Contact Form Submission" />
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">
