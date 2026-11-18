@@ -9,6 +9,7 @@ import {
 } from "lucide-react"
 
 import { programs } from "@/lib/contants/program-data"
+import ProgramGallery from "@/components/program-gallery"
 
 function SingleProgramPage() {
   const { id } = useParams()
@@ -322,7 +323,20 @@ function SingleProgramPage() {
       </section>
 
       {/* =====================================================
-          3. BOTTOM CTA
+          3. PROGRAM GALLERY
+      ===================================================== */}
+
+      <section className="border-t border-border bg-muted/40 px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-7xl">
+          <ProgramGallery
+            photos={program.gallery}
+            programTitle={program.title}
+          />
+        </div>
+      </section>
+
+      {/* =====================================================
+          4. BOTTOM CTA
       ===================================================== */}
 
       <section className="bg-primary px-6 py-16 md:py-20">
