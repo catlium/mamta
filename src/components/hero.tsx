@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle } from "lucide-react"
+import { CheckCircle } from "lucide-react"
 import { Link } from "react-router"
 import { Button } from "@/components/ui/button"
 
@@ -88,10 +88,7 @@ function Hero() {
           {/* CTA */}
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button size="lg" className="group rounded-full px-7">
-              <Link to="/donate">
-                Support Our Mission
-                <ArrowRight className="transition-transform group-hover:translate-x-1" />
-              </Link>
+              <Link to="/donate">Support Our Mission</Link>
             </Button>
 
             <Button size="lg" variant="outline" className="rounded-full px-7">

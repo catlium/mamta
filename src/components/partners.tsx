@@ -48,8 +48,8 @@ function Partners() {
   return (
     <section className="py-10">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="mb-8 text-center text-3xl font-bold text-primary">
-          Our <span className="text-secondary">Partners</span>
+        <h2 className="mb-8 text-center text-4xl font-bold">
+          Our <span className="text-primary">Partners</span>
         </h2>
 
         <Carousel
