@@ -70,17 +70,21 @@ function SingleProgramPage() {
         <div className="absolute inset-0 flex items-center">
           <div className="mx-auto w-full max-w-7xl px-6">
             <div className="max-w-3xl text-white">
-              <p className="font-semibold tracking-wider text-secondary uppercase">
-                {program.category}
-              </p>
+              {program.category && (
+                <p className="font-semibold tracking-wider text-secondary uppercase">
+                  {program.category}
+                </p>
+              )}
 
               <h1 className="mt-4 text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
                 {program.title}
               </h1>
 
-              <p className="mt-5 max-w-2xl text-base leading-8 text-white/85 md:text-lg">
-                {program.description}
-              </p>
+              {program.shortDescription && (
+                <p className="mt-5 max-w-2xl text-base leading-8 text-white/85 md:text-lg">
+                  {program.shortDescription}
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -111,128 +115,136 @@ function SingleProgramPage() {
                 ABOUT PROGRAM
             ------------------------------------------------- */}
 
-            <section>
-              <p className="font-semibold tracking-wider text-secondary uppercase">
-                About The Program
-              </p>
+            {program.description && (
+              <section>
+                <p className="font-semibold tracking-wider text-secondary uppercase">
+                  About The Program
+                </p>
 
-              <h2 className="mt-2 text-3xl font-bold text-foreground md:text-4xl">
-                {program.title}
-              </h2>
+                <h2 className="mt-2 text-3xl font-bold text-foreground md:text-4xl">
+                  {program.title}
+                </h2>
 
-              <p className="mt-6 leading-8 text-muted-foreground">
-                {program.description}
-              </p>
+                <p className="mt-6 leading-8 text-muted-foreground">
+                  {program.description}
+                </p>
 
-              <p className="mt-4 leading-8 text-muted-foreground">
-                This program is designed to work closely with communities and
-                understand their needs. Through field-based activities,
-                volunteers and community members can work together to create
-                meaningful and sustainable change.
-              </p>
-            </section>
+                <p className="mt-4 leading-8 text-muted-foreground">
+                  This program is designed to work closely with communities and
+                  understand their needs. Through field-based activities,
+                  volunteers and community members can work together to create
+                  meaningful and sustainable change.
+                </p>
+              </section>
+            )}
 
             {/* -------------------------------------------------
                 OBJECTIVES
             ------------------------------------------------- */}
 
-            <section className="mt-14">
-              <p className="font-semibold tracking-wider text-secondary uppercase">
-                Our Goals
-              </p>
+            {program.objectives.length > 0 && (
+              <section className="mt-14">
+                <p className="font-semibold tracking-wider text-secondary uppercase">
+                  Our Goals
+                </p>
 
-              <h2 className="mt-2 text-3xl font-bold text-foreground">
-                Program Objectives
-              </h2>
+                <h2 className="mt-2 text-3xl font-bold text-foreground">
+                  Program Objectives
+                </h2>
 
-              <div className="mt-7 space-y-4">
-                {program.objectives.map((objective) => (
-                  <div
-                    key={objective}
-                    className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 transition duration-300 hover:shadow-md"
-                  >
-                    <div className="shrink-0 rounded-full bg-secondary/10 p-2">
-                      <CheckCircle className="h-5 w-5 text-secondary" />
+                <div className="mt-7 space-y-4">
+                  {program.objectives.map((objective) => (
+                    <div
+                      key={objective}
+                      className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 transition duration-300 hover:shadow-md"
+                    >
+                      <div className="shrink-0 rounded-full bg-secondary/10 p-2">
+                        <CheckCircle className="h-5 w-5 text-secondary" />
+                      </div>
+
+                      <p className="leading-7 text-muted-foreground">
+                        {objective}
+                      </p>
                     </div>
-
-                    <p className="leading-7 text-muted-foreground">
-                      {objective}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </section>
+                  ))}
+                </div>
+              </section>
+            )}
 
             {/* -------------------------------------------------
                 FIELD ACTIVITIES
             ------------------------------------------------- */}
 
-            <section className="mt-14">
-              <p className="font-semibold tracking-wider text-secondary uppercase">
-                Field Work
-              </p>
+            {program.activities.length > 0 && (
+              <section className="mt-14">
+                <p className="font-semibold tracking-wider text-secondary uppercase">
+                  Field Work
+                </p>
 
-              <h2 className="mt-2 text-3xl font-bold text-foreground">
-                Field Activities
-              </h2>
+                <h2 className="mt-2 text-3xl font-bold text-foreground">
+                  Field Activities
+                </h2>
 
-              <p className="mt-3 max-w-2xl leading-7 text-muted-foreground">
-                Our field activities focus on direct community participation and
-                practical implementation.
-              </p>
+                <p className="mt-3 max-w-2xl leading-7 text-muted-foreground">
+                  Our field activities focus on direct community participation
+                  and practical implementation.
+                </p>
 
-              <div className="mt-7 grid gap-5 sm:grid-cols-2">
-                {program.activities.map((activity, index) => (
-                  <div
-                    key={activity}
-                    className="rounded-2xl border border-border bg-card p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
-                        {String(index + 1).padStart(2, "0")}
+                <div className="mt-7 grid gap-5 sm:grid-cols-2">
+                  {program.activities.map((activity, index) => (
+                    <div
+                      key={activity}
+                      className="rounded-2xl border border-border bg-card p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+                          {String(index + 1).padStart(2, "0")}
+                        </div>
+
+                        <p className="pt-1 leading-7 font-medium text-foreground">
+                          {activity}
+                        </p>
                       </div>
-
-                      <p className="pt-1 leading-7 font-medium text-foreground">
-                        {activity}
-                      </p>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </section>
+                  ))}
+                </div>
+              </section>
+            )}
 
             {/* -------------------------------------------------
                 FIELD WORK REQUIREMENTS
             ------------------------------------------------- */}
 
-            <section className="mt-14">
-              <p className="font-semibold tracking-wider text-secondary uppercase">
-                Participation
-              </p>
+            {program.requirements.length > 0 && (
+              <section className="mt-14">
+                <p className="font-semibold tracking-wider text-secondary uppercase">
+                  Participation
+                </p>
 
-              <h2 className="mt-2 text-3xl font-bold text-foreground">
-                Field Work Requirements
-              </h2>
+                <h2 className="mt-2 text-3xl font-bold text-foreground">
+                  Field Work Requirements
+                </h2>
 
-              <p className="mt-3 leading-7 text-muted-foreground">
-                The following requirements help volunteers and field workers
-                participate effectively in the program.
-              </p>
+                <p className="mt-3 leading-7 text-muted-foreground">
+                  The following requirements help volunteers and field workers
+                  participate effectively in the program.
+                </p>
 
-              <div className="mt-7 rounded-2xl border border-border bg-muted p-6 md:p-8">
-                <ul className="space-y-5">
-                  {program.requirements.map((requirement) => (
-                    <li key={requirement} className="flex items-start gap-3">
-                      <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                <div className="mt-7 rounded-2xl border border-border bg-muted p-6 md:p-8">
+                  <ul className="space-y-5">
+                    {program.requirements.map((requirement) => (
+                      <li key={requirement} className="flex items-start gap-3">
+                        <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-primary" />
 
-                      <span className="leading-7 text-foreground">
-                        {requirement}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </section>
+                        <span className="leading-7 text-foreground">
+                          {requirement}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </section>
+            )}
           </div>
 
           {/* =================================================
@@ -253,49 +265,63 @@ function SingleProgramPage() {
 
               {/* Category */}
 
-              <div className="mt-7 border-b border-border pb-5">
-                <p className="text-sm text-muted-foreground">Category</p>
+              {program.category && (
+                <div className="mt-7 border-b border-border pb-5">
+                  <p className="text-sm text-muted-foreground">Category</p>
 
-                <p className="mt-1 font-semibold text-foreground">
-                  {program.category}
-                </p>
-              </div>
+                  <p className="mt-1 font-semibold text-foreground">
+                    {program.category}
+                  </p>
+                </div>
+              )}
 
               {/* Location */}
 
-              <div className="border-b border-border py-5">
-                <p className="text-sm text-muted-foreground">Location</p>
+              {program.location && (
+                <div className="border-b border-border py-5">
+                  <p className="text-sm text-muted-foreground">Location</p>
 
-                <div className="mt-2 flex items-start gap-2">
-                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />
+                  <div className="mt-2 flex items-start gap-2">
+                    <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />
 
-                  <p className="font-semibold text-foreground">
-                    {program.location}
-                  </p>
+                    <p className="font-semibold text-foreground">
+                      {program.location}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Activities */}
 
-              <div className="border-b border-border py-5">
-                <p className="text-sm text-muted-foreground">
-                  Field Activities
-                </p>
+              {program.activities.length > 0 && (
+                <div className="border-b border-border py-5">
+                  <p className="text-sm text-muted-foreground">
+                    Field Activities
+                  </p>
 
-                <p className="mt-1 font-semibold text-foreground">
-                  {program.activities.length} Activities
-                </p>
-              </div>
+                  <p className="mt-1 font-semibold text-foreground">
+                    {program.activities.length}{" "}
+                    {program.activities.length === 1
+                      ? "Activity"
+                      : "Activities"}
+                  </p>
+                </div>
+              )}
 
               {/* Requirements */}
 
-              <div className="py-5">
-                <p className="text-sm text-muted-foreground">Requirements</p>
+              {program.requirements.length > 0 && (
+                <div className="py-5">
+                  <p className="text-sm text-muted-foreground">Requirements</p>
 
-                <p className="mt-1 font-semibold text-foreground">
-                  {program.requirements.length} Requirements
-                </p>
-              </div>
+                  <p className="mt-1 font-semibold text-foreground">
+                    {program.requirements.length}{" "}
+                    {program.requirements.length === 1
+                      ? "Requirement"
+                      : "Requirements"}
+                  </p>
+                </div>
+              )}
 
               {/* Get Involved */}
 
@@ -326,14 +352,16 @@ function SingleProgramPage() {
           3. PROGRAM GALLERY
       ===================================================== */}
 
-      <section className="border-t border-border bg-muted/40 px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-7xl">
-          <ProgramGallery
-            photos={program.gallery}
-            programTitle={program.title}
-          />
-        </div>
-      </section>
+      {program.gallery.length > 0 && (
+        <section className="border-t border-border bg-muted/40 px-6 py-16 md:py-20">
+          <div className="mx-auto max-w-7xl">
+            <ProgramGallery
+              photos={program.gallery}
+              programTitle={program.title}
+            />
+          </div>
+        </section>
+      )}
 
       {/* =====================================================
           4. BOTTOM CTA

@@ -82,9 +82,11 @@ function ProgramsPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                   {/* Category */}
-                  <div className="absolute top-4 left-4 rounded-full bg-background/90 px-4 py-2 text-xs font-semibold tracking-wide text-primary backdrop-blur">
-                    {program.category}
-                  </div>
+                  {program.category && (
+                    <div className="absolute top-4 left-4 rounded-full bg-background/90 px-4 py-2 text-xs font-semibold tracking-wide text-primary backdrop-blur">
+                      {program.category}
+                    </div>
+                  )}
                 </div>
 
                 {/* Card Content */}
@@ -95,16 +97,20 @@ function ProgramsPage() {
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-3 leading-7 text-muted-foreground">
-                    {program.description}
-                  </p>
+                  {program.shortDescription && (
+                    <p className="mt-3 leading-7 text-muted-foreground">
+                      {program.shortDescription}
+                    </p>
+                  )}
 
                   {/* Location */}
-                  <div className="mt-5 flex items-center gap-2 text-sm text-muted-foreground">
-                    <MapPin className="h-4 w-4 shrink-0 text-secondary" />
+                  {program.location && (
+                    <div className="mt-5 flex items-center gap-2 text-sm text-muted-foreground">
+                      <MapPin className="h-4 w-4 shrink-0 text-secondary" />
 
-                    <span>{program.location}</span>
-                  </div>
+                      <span>{program.location}</span>
+                    </div>
+                  )}
 
                   {/* Divider */}
                   <div className="my-6 h-px bg-border" />
